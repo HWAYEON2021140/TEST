@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    ul.gnb {
+      display: flex;
+      width: 1200px;
+    }
+
+    ul.gnb>li {
+      position: relative;
+      flex: 1;
+      text-align: center;
+      line-height: 110px;
+    }
+
+    ul.gnb>li>a {
+      position: relative;
+    }
+
+    ul.gnb>li ul.sub {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background: white;
+      overflow: hidden;
+    }
+
+    ul.gnb>li:hover {
+      height: 250px;
+    }
+
+    /*이것에 대한 문제점 발견, 왜 적용되지 않는 것인지 질문*/
+  </style>
+</head>
+
+<body>
+  <ul class="gnb">
+    <li>
+      <a href="#">About SPC</a>
+      <ul class="sub">
+        <li><a href="#">SPC WAY</a></li>
+        <li><a href="#">R&D</a></li>
+        <li><a href="#">관계사</a></li>
+        <li><a href="#">글로벌</a></li>
+        <li><a href="#">CI소개</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">HISTORY</a>
+      <ul class="sub">
+        <li><a href="#">헤리티지</a></li>
+        <li><a href="#">연혁</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">BRAND</a>
+      <ul class="sub">
+        <li><a href="#">베이커리</a></li>
+        <li><a href="#">디저트</a></li>
+        <li><a href="#">외식/다이닝</a></li>
+        <li><a href="#">커피/음료</a></li>
+        <li><a href="#">유통/서비스</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">SPC NOW</a>
+      <ul class="sub">
+        <li><a href="#">뉴스</a></li>
+        <li><a href="#">매거진</a></li>
+        <li><a href="#">SNS</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">COMPLAINCE</a>
+      <ul class="sub">
+        <li><a href="#">준법경영</a></li>
+        <li><a href="#">정도경영</a></li>
+        <li><a href="#">안전경영</a></li>
+        <li><a href="#">핫라인제보</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">SUPPORT</a>
+      <ul class="sub">
+        <li><a href="#">가맹문의</a></li>
+        <li><a href="#">위치 안내</a></li>
+        <li><a href="#">문의하기</a></li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>

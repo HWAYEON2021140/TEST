@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신세계푸드_flex</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      background-color: #ccc;
+      list-style: none;
+      width: 1280px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin: 50px auto;
+      padding: 0;
+    }
+
+    ul li {
+      border-radius: 40px;
+      overflow: hidden;
+    }
+
+    ul li:nth-child(even) {
+      position: relative;
+      top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="brand">
+    <li>
+      <a href="#"><img src="https://www.shinsegaefood.com/images/business/business_item_hotelCollection.jpg" alt="호텔">
+      </a>
+    </li>
+    <li>
+      <a href="#"><img src="https://www.shinsegaefood.com/images/business/business_item_vecchiaEnuovo.jpg" alt="베키아네누보">
+      </a>
+    </li>
+    <li>
+      <a href="#"><img src="https://www.shinsegaefood.com/images/business/business_item_olbaan.jpg" alt="올반">
+      </a>
+    </li>
+    <li>
+      <a href="#"><img src="https://www.shinsegaefood.com/images/business/business_item_brand.jpg" alt="노브랜드">
+      </a>
+    </li>
+    <li>
+      <a href="#"><img src="https://www.shinsegaefood.com/images/business/business_item_recette.jpg" alt="르쎄떼">
+      </a>
+    </li>
+  </ul>
+</body>
+
+</html>

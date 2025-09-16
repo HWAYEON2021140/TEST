@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 각 li 아이템 스타일 */
+    .story-item {
+      display: flex;
+      width: 100%;
+      height: 100vh;
+    }
+
+    /* 번갈아가며 좌우 배치 */
+    .story-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* 텍스트 박스 */
+    .text-box {
+      width: 50%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .image-box {
+      width: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* 색상 배경 */
+    .green {
+      background: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_G.png);
+      color: white;
+    }
+
+    .blue {
+      background: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_B.png);
+      color: white;
+    }
+
+    .light {
+      background: url(https://www.jpdc.co.kr/pub/site/samdasoo/new_images/bg_W.png);
+      color: #0044cc;
+    }
+
+    /* 텍스트 스타일 */
+    .title {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .title strong {
+      font-size: 28px;
+      display: block;
+    }
+
+    .headline {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li class="story-item green">
+      <div class="text-box">
+        <p class="title">PERMEATING<br><strong>01</strong></p>
+        <p class="headline">스며듦</p>
+        <p class="desc">
+          제주 한라산 국립공원 내 1,450m 부근 청정 지역 위에 내린 빗물은<br>
+          약 18년에서 22년 동안 아주 천천히, 깊은 양수층으로 스며들어 맑은 지하수가 됩니다.
+        </p>
+      </div>
+      <div>
+        <img src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg2.png" alt="숲">
+      </div>
+    </li>
+
+    <li class="story-item blue">
+      <div class="text-box">
+        <p class="title">HOLDING<br><strong>02</strong></p>
+        <p class="headline">머금음</p>
+        <p class="desc">
+          지하수는 땅속에 강처럼 흐르고 있는 것이 아니라,<br>
+          압력의 틈 사이에 존재하고 있습니다.<br>
+          더 깊은 지하의 압살로 이동하며 더욱 맑은 지하수가 됩니다.
+        </p>
+      </div>
+      <div>
+        <img src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg3.png" alt="숲">
+      </div>
+    </li>
+
+    <li class="story-item light">
+      <div class="text-box">
+        <p class="title">PURITY<br><strong>03</strong></p>
+        <p class="headline">청정함</p>
+        <p class="desc">
+          사람의 발길이 닿지 않는 청정지역에서 내린 빗물과<br>
+          오염물질을 걸러주는 화산송이, 그 자연의 그대로의 상태가<br>
+          제주삼다수의 청정 수질을 자랑합니다.
+        </p>
+      </div>
+      <div>
+        <img src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg4.png" alt="숲">
+      </div>
+    </li>
+
+    <li class="story-item light">
+      <div class="text-box">
+        <p class="title">VALUE<br><strong>04</strong></p>
+        <p class="headline">소중함</p>
+        <p class="desc">
+          자연이 준 선물과도 같은 제주의 지하수,<br>
+          그 소중한 가치를 오래도록 지키기 위해 제주삼다수는 끊임없이 노력하고 있습니다.
+        </p>
+      </div>
+      <div>
+        <img src="https://www.jpdc.co.kr/pub/site/samdasoo/new_images/sub1/bg5.png" alt="숲">
+      </div>
+    </li>
+  </ul>
+</body>
+
+</html>

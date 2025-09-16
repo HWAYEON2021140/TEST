@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    div {
+      background-color: #F00;
+      padding: 100px;
+      margin: 50px;
+      border: 20px solid rgba(0, 0, 0, 0.5);
+    }
+
+    div.a01 {
+      background-clip: border-box;
+    }
+
+    div.a02 {
+      background-clip: content-box;
+    }
+
+    div.a03 {
+      background-clip: padding-box;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p>
+    <img src="https://cdn.pixabay.com/photo/2023/01/05/09/31/ferris-wheel-7698474_1280.jpg">
+  </p>
+  <p>이미지</p>
+
+  <h1>
+    관람차
+  </h1>
+  <div class="a01">백그라운드</div>
+  <div class="a02">백그라운드</div>
+  <div class="a03">백그라운드</div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .wrapper {
+      width: 800px;
+      margin: 0 auto;
+      font-size: 0;
+    }
+
+    .wrapper>div {
+      display: flex;
+    }
+
+    .wrapper .top {
+      height: 24px;
+
+    }
+
+    .wrapper.menu {
+      height: 13px;
+      justify-content: space-between;
+    }
+
+    .wrapper.menu div {
+      display: flax;
+    }
+
+    .wrapper.menu div ul {
+      display: flax;
+      gap: 50px
+    }
+
+    .wrapper.menu div ul li a {
+      font-size: 12px;
+    }
+
+    .wrapper .menu {
+      align-items: flex-end;
+      height: 20px;
+    }
+
+    .wrapper .foot {
+      height: 35px;
+    }
+  </style>
+</head>
+<div class="wrapper">
+  <div class="top">
+    <p><img src="./images/food_img/top.gif" alt="top"></p>
+  </div>
+  <div>
+    <ul>
+      <li><a href="#">august / 2003 /</a></li>
+      <li><a href="#">summer</a></li>
+      <li><a href="#">special</a></li>
+      <li><a href="#">e·magazine</a></li>
+    </ul>
+  </div>
+
+  <div class="menu">
+    <p><img src="./images/food_img/food_01.gif" alt="top"></p>
+    <p><img src="./images/food_img/directory.gif" alt="top"></p>
+    <p><img src="./images/food_img/food_02.gif" alt="top"></p>
+  </div>
+  <!--탑 네비게이션 끝-->
+
+  <!--본문 시작-->
+  <div class="menu">
+    <div>
+      <p><img src="./images/food_img/note.gif" alt="con1"></p>
+      <p><img src="./images/food_img/image.gif" alt="con2"></p>
+      <div>
+        <p><img src="./images/food_img/number.gif" alt="con2"></p>
+        <p><img src="./images/food_img/navigation.gif" alt="top"></p>
+
+        <div>
+          <p><img src="./images/food_img/page.gif" alt="con2"></p>
+        </div>
+
+      </div>
+    </div>
+    <div class="foot">
+      <p><img src="./images/food_img/bottom.gif" alt="top"></p>
+    </div>
+  </div>
+
+  <!--wrap 마지막 div-->
+</div>
+
+<body>
+
+</body>
+
+</html>

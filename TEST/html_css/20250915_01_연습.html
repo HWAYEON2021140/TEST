@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    body {
+      background: #d3222a;
+    }
+
+    .wrap {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    .wrap .top {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .wrap .top ul {
+      display: flex;
+      gap: 20px;
+      height: 50px;
+    }
+
+    .wrap .top ul li a {
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .pattern {
+      background: url(./images/instory/pattern.gif);
+      height: 82px;
+    }
+
+    .wrap .main {
+      display: flex;
+      height: 625px;
+    }
+
+    .wrap .main>div:nth-child(2) {
+      width: 514px;
+      background: url(./images/instory/index_main_02.gif);
+    }
+
+    .wrap .copyright {
+      background: #fff;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- 상단바 -->
+    <div class="top">
+      <ul>
+        <li><a href="#">KOREAN</a></li>
+        <li><a href="#">ENGLISH</a></li>
+        <li><a href="#">JAPANESE</a></li>
+        <li><a href="#">CHAINESE</a></li>
+        <li><a href="#">KOREAN</a></li>
+      </ul>
+    </div>
+    <div class="bg">
+      <div class="pattern">
+        <p>
+          <img src="./images/instory/index_pattern.gif" alt="패턴">
+        </p>
+      </div>
+    </div>
+    <!-- 로고 -->
+    <div class="main">
+      <div>
+        <p><img src="./images/instory/index_main_01.gif" alt="main"></p>
+      </div>
+      <div>
+        <h1>home 메인페이지입니다.</h1>
+      </div>
+    </div>
+
+    <!-- 카피라이트-->
+    <div class="copyright">
+      <p><img src="./images/instory/copyright.gif" alt="coryright"></p>
+    </div>
+  </div>
+
+</body>
+
+</html>
