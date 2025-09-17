@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mad for Garlic</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      background: #000;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #7f7d7a;
+    }
+
+    .wrap {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .top {
+      height: 84px;
+      width: 1504px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 165px;
+    }
+
+    .gnb ul {
+      display: flex;
+      gap: 40px
+    }
+
+    .gnb ul li a {
+      transition: 0.3s;
+      font-size: 14px;
+    }
+
+    .gnb ul li a:hover {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .utility ul {
+      display: flex;
+      gap: 20px;
+      font-size: 10px;
+    }
+
+    .utility ul li a {
+      transition: 0.3s;
+    }
+
+    .utility ul li a:hover {
+      color: #fff;
+    }
+
+    .utility ul li a::after {
+      content: "|";
+      padding-left: 15px;
+    }
+
+    .utility ul li:last-child a::after {
+      content: "";
+    }
+
+    .visual {
+      width: 1504px;
+      height: 940px;
+      margin: 0 auto;
+    }
+
+    .visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /*foot css*/
+
+    .foot {
+      width: 1504px;
+      margin: 0 auto;
+
+    }
+
+    .add {
+      margin-top: 80px;
+    }
+
+    .add p {
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 18px;
+
+    }
+
+    .bottom ul {
+      display: flex;
+      list-style: none;
+    }
+
+    .bottom .sns {
+      display: flex;
+      margin-right: auto;
+    }
+
+    .bottom .sns li a {
+      display: block;
+      width: 35px;
+      height: 30px;
+      margin-top: 50px;
+      background: url("https://www.madforgarlic.com/resources/pc/images/common/btn_sns_B.png") no-repeat;
+      overflow: hidden;
+    }
+
+    .bottom .sns li:first-child a {
+      background-position: -70px 0;
+    }
+
+    .bottom .sns li:nth-child(2) a {
+      background-position: -105px 0;
+    }
+
+    .bottom .app {
+      display: flex;
+      list-style: none;
+    }
+
+    .bottom .app li a {
+      display: block;
+      width: 130px;
+      height: 35px;
+      background: url(https://www.madforgarlic.com/resources/pc/images/common/btn_app_B.png);
+      overflow: hidden;
+    }
+
+    .bottom .app li:first-child a {
+      background-position: 0 0;
+    }
+
+    .bottom ul.app li:nth-child(2) a {
+      background-position: -130px 0;
+    }
+
+    .under .other {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 20px 0 0;
+      padding-bottom: 50px;
+    }
+
+    .under .other a {
+      font-size: 10px;
+      color: #7f7d7a;
+      transition: 0.3s;
+    }
+
+    .under .other a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="logo">
+        <p>
+          <img src="https://www.madforgarlic.com/resources/pc/images/common/logoB_B2.png" alt="logo">
+        </p>
+      </div>
+      <div class="gnb">
+        <ul>
+          <li><a href="#">BRAND</a></li>
+          <li><a href="#">MENU</a></li>
+          <li><a href="#">STORE</a></li>
+          <li><a href="#">MEMBERSHIP</a></li>
+          <li><a href="#">EVENT</a></li>
+        </ul>
+      </div>
+      <div class="utility">
+        <ul>
+          <li><a href="#">LOGIN</a></li>
+          <li><a href="#">JOIN</a></li>
+          <li><a href="#">CUSTOMER</a></li>
+          <li><a href="#">RECRUIT</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- top end-->
+    <div class="visual">
+      <p><img src="https://cdnt.madforgarlic.com/madforgarlic/202503/20250304_ACB_1741050726866.jpg" alt="visual"></p>
+    </div>
+    <!-- visual end-->
+    <div class="foot">
+      <div class="add">
+        <p>(주)엠에프지코리아 서울시 강남구 학동로 306, 곤비빌딩 B2F / 우편번호: 06098<br />
+          대표문의: 02-2286-8800<br />
+          사업자번호: 261-81-16391 ㅣ 대표자: 윤다예<br />
+          <br /> COPYRIGHT ⓒ MFGKOREA ALL RIGHTS RESERVED.
+        </p>
+      </div>
+      <!-- add end-->
+      <div class="bottom">
+        <ul class="sns">
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+        <ul class="app">
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+      <div class="under">
+        <ul class="other">
+          <li><a href="#">PRIVACY POLICY</a></li>
+          <li><a href="#">TERMS OF SERVICE</a></li>
+          <li><a href="#">CUSTOMER</a></li>
+          <li><a href="#">RECRUIT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
