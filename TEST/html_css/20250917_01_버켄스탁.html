@@ -40,6 +40,20 @@
       color: #fff;
     }
 
+    .topwrap .top ul li a:hover {
+      color: red;
+    }
+
+    .topwrap .top ul li a::after {
+      content: "/";
+      padding-left: 15px;
+    }
+
+    .topwrap .top ul li:last-child a::after {
+      content: ""
+    }
+
+
     .logo1 {
       text-align: center;
       padding: 50px 0;
@@ -75,7 +89,7 @@
       gap: 90px;
     }
 
-    ul.icon {
+    ul.icon li {
       position: relative;
     }
 
@@ -91,16 +105,58 @@
       text-align: center;
       border-radius: 50%;
       line-height: 100px;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    ul.icon li:hover::after {
+      opacity: 1;
     }
 
     ul.icon li:first-child::after {
-      content: "" ABOUT;
+      content: "ABOUT";
     }
 
-    .sub {
+    ul.icon li:nth-child(2)::after {
+      content: "COLLECTION";
+    }
+
+    ul.icon li:nth-child(3)::after {
+      content: "SHOP";
+    }
+
+    ul.icon li:nth-child(4)::after {
+      content: "SERVICES";
+    }
+
+    ul.sub {
       width: 1182px;
       margin: 50px auto;
       display: flex;
+    }
+
+    ul.sub li {
+      position: relative;
+    }
+
+    ul.sub li a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    ul.sub li:hover a {
+      opacity: 1;
     }
 
     ul.link {
@@ -143,6 +199,7 @@
       justify-content: space-between;
       align-items: center;
       color: #fff;
+
     }
 
     .foot>div ul {
@@ -157,9 +214,9 @@
     <div class="topwrap">
       <div class="top">
         <ul>
-          <li><a href="#">회원가입 /</a></li>
-          <li><a href="#">로그인 /</a></li>
-          <li><a href="#">장바구니 /</a></li>
+          <li><a href="#">회원가입 </a></li>
+          <li><a href="#">로그인 </a></li>
+          <li><a href="#">장바구니 </a></li>
           <li><a href="#">고객센터</a></li>
         </ul>
       </div>
@@ -184,9 +241,15 @@
       <li><a href="#"><img src="./images/birkenstock/images/icon4.png" alt="04"></a></li>
     </ul>
     <ul class="sub">
-      <li><a href="#"><img src="./images/birkenstock/images/sub1.png" alt="01"></a></li>
-      <li><a href="#"><img src="./images/birkenstock/images/sub2.png" alt="02"></a></li>
-      <li><a href="#"><img src="./images/birkenstock/images/sub3.png" alt="03"></a></li>
+      <li><img src="./images/birkenstock/images/sub1.png" alt="01"><a href="#">
+          <p>2018년 여름 신상<br />지금 바로 만나보세요!<br />+</p>
+        </a></li>
+      <li><img src="./images/birkenstock/images/sub2.png" alt="02"><a href="#">
+          <p>상품<br />구매하기</p>
+        </a></li>
+      <li><img src="./images/birkenstock/images/sub3.png" alt="03"><a href="#">
+          <p>이보다 더 'cool'<br />할 수는 없다.</p>
+        </a></li>
     </ul>
     <ul class="link">
       <li>
