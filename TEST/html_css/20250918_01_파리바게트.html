@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <style>
+    @font-face {
+      font-family: PBGothic;
+      src: url(https://www.paris.co.kr/wp-content/themes/paris/assets/css/fonts/PBGothicOTFRg.woff2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav {
+      height: 90px;
+      background: #023586;
+    }
+
+    nav>div {
+      width: 1420px;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav>div>ul {
+      display: flex;
+      gap: 20px;
+
+    }
+
+    nav>div>ul>li>a {
+      color: #fff;
+      position: relative;
+      vertical-align: middle;
+    }
+
+    nav>div>ul>li {
+      position: relative;
+    }
+
+    nav>div>ul>li>a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      bottom: -33px;
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      padding: 0 10px;
+      transform-origin: 0 0;
+      transition: 0.5s;
+    }
+
+    nav>div>ul>li:hover>a::after {
+      transform: translateX(-50%) scale(1);
+      width: 100%;
+    }
+
+    nav>div>ul:nth-child(3) li:nth-child(5):hover>a::after {
+      transform: translateX(-50%) scale(0);
+    }
+
+    nav>div>ul .sub {
+      position: absolute;
+      left: -10px;
+      top: 55px;
+      width: 320px;
+      height: 128px;
+      padding: 24px;
+      background: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      opacity: 0;
+    }
+
+    nav>div>ul:first-child li:last-child:hover .sub {
+      opacity: 1;
+    }
+
+    nav>div>ul .sub li {
+      flex: 1 1 40%;
+    }
+
+    ul.visual {
+      display: flex;
+
+    }
+
+    ul.visual li {
+      flex: 1;
+    }
+
+    ul.visual li img {
+      width: 100%;
+    }
+
+    .slide {
+      width: 1420px;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .promotion {
+      width: 1420px;
+      margin: 0 auto;
+    }
+
+    .promotion>div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .promotion>ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    .promotion>ul li {
+      flex: 1;
+    }
+
+    /*굳이 w를 계산하지 않아도 알아서 크기를 가져가기 때문에 flex 1을 선언하는 것이다. */
+    /*
+    flex 3개(grow, shirnk, basis)
+    1. 부모의 크기가 남으면 자식들에게 일정한 자산을 배분하듯 알아서 그 크기를 배분한다.
+    2. 부모의 속성을 넘치는 애들한테 잡도리해서 일정하게 가져갈 수 있도록 한다.
+    3. 유동적이기에 유동적인 친구들한테는 부모의 넓은 아량으로 일단 크기 넘쳐도 이해해준다는 뉘앙스로 넘어가는 거다*/
+
+    .promotion>ul li a {
+      display: block;
+    }
+
+    .promotion>ul li a p:nth-child(2) {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .promotion>ul li img {
+      width: 100%;
+    }
+
+    .products {
+      width: 1420px;
+      margin: 0 auto;
+    }
+
+    /*기본적으로 products에 w를 주어, 가로폭을 선정한 뒤,*/
+
+    .products ul {
+      display: flex;
+    }
+
+    /*ul 하위 자식들에게 가로로 배치할 것을 선언하는 것으로,*/
+
+    .products ul li {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div>
+      <ul class="left">
+        <li><a href="#">창업안내</a></li>
+        <li><a href="#">파바 매거진</a></li>
+        <li><a href="#">파바 스토리</a></li>
+        <li><a href="#">상품 안내</a>
+          <ul class="sub">
+            <li><a href="#">전체</a></li>
+            <li><a href="#">브레드</a></li>
+            <li><a href="#">케이크</a></li>
+            <li><a href="#">샌드위치 샐러드</a></li>
+            <li><a href="#">선물</a></li>
+            <li><a href="#">디저트 스낵</a></li>
+            <li><a href="#">커피음료</a></li>
+            <li><a href="#">간편</a></li>
+          </ul>
+        </li>
+      </ul>
+      <p><img src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/02/Paris_Baguette_logo_BG.gif"
+          alt="logo"></p>
+      <ul class="right">
+        <li><a href="#">회사 소개</a></li>
+        <li><a href="#">매장 정보</a></li>
+        <li><a href="#">온라인 주문</a></li>
+        <li><a href="#">프로모션</a></li>
+        <li><a href="#"><span class="material-symbols-outlined">
+              search
+            </span></a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="visual">
+    <li>
+      <p><img
+          src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000-3.jpg"
+          alt="케데헌_케이크"></p>
+    </li>
+    <li>
+      <p><img
+          src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%83%E1%85%A5%E1%84%91%E1%85%B5%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000_%E1%84%83%E1%85%A5%E1%84%91%E1%85%B5.jpg"
+          alt="더피"></p>
+    </li>
+    <li>
+      <p><img
+          src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%E1%84%86%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%87%E1%85%A2%E1%84%82%E1%85%A5_1600_2000_4.jpg"
+          alt="종합선물세트"></p>
+    </li>
+  </ul>
+
+
+  <div class="slide">
+    <img src="	https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/08/alba_PC_1096x211.jpg" alt="">
+  </div>
+
+  <div class="promotion">
+    <div>
+      <h1><a href="#">PROMOTION</a></h1>
+      <p><a href="#">SHOW MORE</a></p>
+    </div>
+    <ul>
+      <li>
+        <p><img
+            src="	https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/0915_%E1%84%8B%E1%85%A9%E1%86%A8%E1%84%89%E1%85%AE%E1%84%89%E1%85%AE%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6%E1%84%86%E1%85%A1%E1%86%AF%E1%84%8E%E1%85%A1%E1%84%85%E1%85%A1%E1%84%84%E1%85%A6_%E1%84%8A%E1%85%A5%E1%86%B7%E1%84%82%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%AF_1000x1000-600x600.jpg"
+            alt="latte"></p>
+        <p>
+          <span>🍁가을에 퐁당 🌿제주말차라떼&옥수수라떼🌽 출시💙</span>
+          <span>READ MORE</span>
+        </p>
+      </li>
+      <li>
+        <p><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%ED%95%AB%EC%83%8C%EB%93%9C%EC%9C%84%EC%B9%983%EC%A2%85-%EC%8D%B8%EB%84%AC-600x600.png"
+            alt="latte"></p>
+        <p>
+          <span>💙파란라벨🏷️ 따듯하게 즐기는 핫 샌드위치🥪</span>
+          <span>READ MORE</span>
+        </p>
+      </li>
+      <li>
+        <p><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%ED%94%84%EB%A1%9C%EB%AA%A8%EC%85%98_1_%EC%8D%B8%EB%84%A4%EC%9D%BC_1000x1000-600x600.jpg"
+            alt="latte"></p>
+        <p>
+          <span>🍯우리벌꿀 카스테라 🐝구매 시, 💐실키롤케익 증정!💝</span>
+          <span>READ MORE</span>
+        </p>
+      </li>
+      <li>
+        <p><img src="http://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/Thum_1000x1000-1-600x600.jpg"
+            alt="latte"></p>
+        <p>
+          <span>💙파바에서 매일 즐기는☕더 깊어진 카페 아다지오 커피의 풍미😙</span>
+          <span>READ MORE</span>
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="products">
+    <div>
+      <h1><a href="#">PRODUCTS</a></h1>
+      <p><a href="#">SHOW MORE</a></p>
+    </div>
+    <ul>
+      <li>
+        <p><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%EC%86%8C%EA%B8%88%EB%B2%84%ED%84%B0%EC%86%8C%EB%B3%B4%EB%A3%A8%EB%B2%88-%EC%8D%B8%EB%84%AC3-600x600.jpg"
+            alt="골든 소보루 번"></p>
+        <span>골든 소보루 번</span>
+      </li>
+      <li>
+        <p><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%ED%96%89%EC%9A%B4%EC%9D%98%EB%8B%A8%ED%8C%A5%EB%B9%B5-%EC%8D%B8%EB%84%AC3-600x600.jpg"
+            alt="행운의 단팥빵"></p>
+        <span>행운의 단팥빵</span>
+      </li>
+      <li>
+        <p><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%EA%B3%B6%EA%B0%90%ED%8C%8C%EC%9A%B4%EB%93%9C_%EC%8D%B8%EB%84%AC-600x600.png"
+            alt="곶감파운드"></p>
+        <span>곶감 파운드</span>
+      </li>
+      <li>
+        <p><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%EC%A0%9C%EC%A3%BC%EC%91%A5%EC%98%A4%EB%A9%94%EA%B8%B0%EB%B9%B5-%EC%8D%B8%EB%84%AC3-600x600.jpg"
+            alt="오메기빵"></p>
+        <span>제주 쑥 오메기 빵</span>
+      </li>
+      <li>
+        <p><img
+            src="https://d2afncas1tel3t.cloudfront.net/wp-content/uploads/2025/09/%EA%B3%A8%EB%93%A0%EB%B2%84%ED%84%B0%EB%B2%88-%EC%8D%B8%EB%84%AC2-600x600.jpg"
+            alt="오메기빵"></p>
+        <span>골든 버터 번</span>
+      </li>
+    </ul>
+  </div>
+
+
+
+</body>
+
+</html>
