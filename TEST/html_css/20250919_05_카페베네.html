@@ -31,51 +31,53 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      background-color: #fff;
+      position: relative;
+      background: #fff;
+      padding-right: 90px;
     }
 
     .gnb p {
-      display: flex;
       align-items: center;
-      margin-right: 40px;
     }
 
     .gnb p img {
       width: 132px;
       height: 64px;
-      /* display: block;*/
+      margin-right: 32px;
+      display: block;
     }
 
     .gnb .menu {
-      display: flex;
       flex: 1;
-      align-items: center;
-      margin: 0 auto;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 100px;
+      gap: 72px;
     }
 
-    .menu li:last-child {
-      background: #00A5B1;
+    .gnb>p:nth-child(2) {
+      margin-left: auto;
     }
 
-    .menu li:nth-child(7) a {
+    .gnb>p:nth-of-type(2) a {
+      padding: 10px 24px;
+      background: #00a5b1;
       color: #fff;
-    }
-
-    div .lang {
-      display: flex;
+      border-radius: 20px;
+      font-weight: bold;
     }
 
     .gnb .lang {
+      position: absolute;
+      top: 12px;
+      right: 16px;
       display: flex;
       align-items: center;
-      gap: 8px;
       font-size: 12px;
       color: #6b7684;
-      margin-left: 24px;
     }
+
+
 
     .gnb .lang a {
       color: #6b7684;
@@ -85,6 +87,11 @@
       content: "|";
       margin: 0 8px;
       opacity: .5;
+    }
+
+
+    .main .photo li p img {
+      width: 100%;
     }
   </style>
 </head>
@@ -100,8 +107,8 @@
         <li><a href="#">Membership</a></li>
         <li><a href="#">Global</a></li>
         <li><a href="#">Contents</a></li>
-        <li><a href="#">가맹문의</a></li>
       </ul>
+      <p><a href="#">가맹문의</a></p>
       <div class="lang">
         <p><a href="#">KR</a></p>
         <p><a href="#">EN</a></p>
@@ -111,7 +118,7 @@
   <div class="main">
     <ul class="photo">
       <li>
-        <p><img src="" alt=""></p>
+        <p><img src="http://www.caffebene.co.kr/uploads/banner/20241222735743.jpg" alt=""></p>
       </li>
     </ul>
   </div>
