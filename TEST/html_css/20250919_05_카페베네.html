@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cafebene</title>
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -55,11 +56,11 @@
       gap: 72px;
     }
 
-    .gnb>p:nth-child(2) {
+    .gnb>p.open {
       margin-left: auto;
     }
 
-    .gnb>p:nth-of-type(2) a {
+    .gnb>p.open a {
       padding: 10px 24px;
       background: #00a5b1;
       color: #fff;
@@ -77,18 +78,13 @@
       color: #6b7684;
     }
 
-
-
-    .gnb .lang a {
-      color: #6b7684;
+    .gnb .lang p a::after{
+    content:"|";
+    margin:0 8px;
+    opacity:.5;
     }
-
-    .gnb .lang p+p::before {
-      content: "|";
-      margin: 0 8px;
-      opacity: .5;
-    }
-
+    .gnb .lang p:last-child a::after{
+    content:"";   }   
 
     .main .photo li p img {
       width: 100%;
@@ -108,7 +104,7 @@
         <li><a href="#">Global</a></li>
         <li><a href="#">Contents</a></li>
       </ul>
-      <p><a href="#">가맹문의</a></p>
+      <p class="open"><a href="#">가맹문의</a></p>
       <div class="lang">
         <p><a href="#">KR</a></p>
         <p><a href="#">EN</a></p>
