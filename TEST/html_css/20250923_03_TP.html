@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .photo {
+      position: relative;
+      width: 1920px;
+      height: 480px;
+      overflow: hidden;
+    }
+
+    .photo p {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .photo p img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+    }
+
+    #photo1:checked~div p:first-child img,
+    #photo2:checked~div p:nth-child(2) img,
+    #photo3:checked~div p:nth-child(3) img,
+    #photo4:checked~div p:nth-child(4) img,
+    #photo5:checked~div p:nth-child(5) img,
+    #photo6:checked~div p:nth-child(6) img {
+      opacity: 1;
+    }
+
+    div.btn {
+      display: flex;
+      width: 1714px;
+      margin: 0 auto;
+      justify-content: center;
+      gap: 20px;
+      font-size: 20px;
+    }
+
+    .btn label {
+      display: block;
+      height: 100%;
+      text-align: center;
+      line-height: 60px;
+      cursor: pointer;
+      position: relative;
+      cursor: pointer;
+      color: #999;
+      transition: color 0.5s ease;
+    }
+
+    .btn label::before {
+      content: "|";
+      padding-right: 25px;
+    }
+
+    .btn label:first-child:before {
+      content: "";
+    }
+
+    .btn label::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background: #5cb3e6;
+      transform: scaleX(0);
+      transition: 0.5s;
+    }
+
+    .btn label:hover::after {
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+
+<body>
+  <input type="radio" name="photo" id="photo1" checked>
+  <input type="radio" name="photo" id="photo2">
+  <input type="radio" name="photo" id="photo3">
+  <input type="radio" name="photo" id="photo4">
+  <input type="radio" name="photo" id="photo5">
+  <input type="radio" name="photo" id="photo6">
+  <div class="btn">
+    <label for="photo1">CEO 인사말</label>
+    <label for="photo2">연혁</label>
+    <label for="photo3">미션-비전</label>
+    <label for="photo4">CI</label>
+    <label for="photo5">계열사</label>
+    <label for="photo6">글로벌 사업장</label>
+  </div>
+  <div class="photo">
+    <p><img src="https://tp-inc.com/images/sub/sub_visual01_1.jpg" alt="" /></p>
+    <p><img src="https://tp-inc.com/images/sub/sub_visual02.jpg" alt="" /></p>
+    <p><img src="	https://tp-inc.com/images/sub/sub_visual_vision.jpg" alt="" /></p>
+    <p><img src="	https://tp-inc.com/images/sub/sub_visual04_2.jpg" alt="" /></p>
+    <p><img src="	https://tp-inc.com/images/sub/sub_visual_nadia.jpg" alt="" /></p>
+    <p><img src="https://tp-inc.com/images/sub/sub_visual_global.jpg" alt="" /></p>
+  </div>
+
+</body>
+
+</html>
