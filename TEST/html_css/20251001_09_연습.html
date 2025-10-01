@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .intro {
+      background: url(https://www.leeyoungji.co.kr/assets/images/bg01.jpg);
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .in-bubble {
+      position: relative;
+    }
+
+    .in-bubble .n-hover img {
+      display: block;
+      position: absolute;
+      cursor: url(https://www.leeyoungji.co.kr/assets/images/needle.png), pointer;
+    }
+
+    .in-bubble .n-hover:hover img {
+      display: none;
+    }
+
+    .l-bubble p,
+    .r-bubble p {
+      position: absolute;
+      width: 350px;
+    }
+
+    .l-bubble p {
+      left: 30px;
+      bottom: 0;
+      animation: l-bubble 3s infinite;
+    }
+
+    @keyframes l-bubble {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .r-bubble p {
+      right: 50px;
+      top: 50px;
+      animation: r-bubble 4s infinite;
+    }
+
+    @keyframes r-bubble {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="go" hidden>
+
+  <div class="intro">
+    <div class="in-bubble">
+      <label for="go" class="n-hover">
+        <img src="https://www.leeyoungji.co.kr/assets/images/bubble.gif" alt="in-bubble">
+      </label>
+      <a href="#">
+        <p class="t-hover"> <img src="https://www.leeyoungji.co.kr/assets/images/b-hover.png" alt="in-bubble-hover">
+        </p>
+      </a>
+    </div>
+    <div class="l-bubble">
+      <p>
+        <img src="https://www.leeyoungji.co.kr/assets/images/b-left.png" alt="l-bubble">
+      </p>
+    </div>
+    <div class="r-bubble">
+      <p>
+        <img src="https://www.leeyoungji.co.kr/assets/images/b-right.png" alt="r-bubble">
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+<p>
+  <img src="https://www.leeyoungji.co.kr/assets/images/fall.gif" alt="fall">
+</p>
+
+<p>
+  <img src="https://www.leeyoungji.co.kr/assets/images/cloud.png" alt="cloud">
+</p>
+
+<p><img src="https://www.leeyoungji.co.kr/assets/images/bg02.jpg" alt="bg2"></p>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* .box {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .box img {
+      position: absolute;
+    }*/
+
+    .ani {
+      text-align: center;
+    }
+
+    .box {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+    }
+
+    .box p {
+      position: absolute;
+    }
+
+    .btn {
+      margin-top: 50px;
+    }
+
+    .btn label {
+      border: 1px solid;
+      padding: 10px 20px;
+      border-radius: 100px;
+      cursor: pointer
+    }
+
+    @keyframes left {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(-1080deg);
+      }
+    }
+
+    @keyframes right {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(1080deg);
+      }
+    }
+
+    #left:checked~.box p:last-child img {
+      animation: left 2s linear infinite;
+    }
+
+    #right:checked~.box p:last-child img {
+      animation: right 2s linear infinite;
+    }
+
+
+    #off:checked~.box p:last-child img {
+      animation-play-state: paused;
+    }
+
+    .btn label:hover {
+      background: #ccc;
+    }
+
+    #left:checked~.box btn:first-child,
+    #right:checked~.box btn:nth-child(2),
+    #off:checked~.box btn:last-child {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ani">
+    <input type="radio" name="btn" id="left">
+    <input type="radio" name="btn" id="right">
+    <input type="radio" name="btn" id="off">
+    <div class="box">
+      <p><img src="./images/pipe.png" alt="pipe"></p>
+      <p><img src="./images/propeller.png" alt="propeller"></p>
+    </div>
+    <div class="btn">
+      <label for="left">Turn Left</label>
+      <label for="right">Turn Right</label>
+      <label for="off">Off</label>
+    </div>
+  </div>
+</body>
+
+</html>

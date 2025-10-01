@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul.list {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 50px;
+    }
+
+    ul.list li {
+      width: 216px;
+      height: 293px;
+      padding: 32px;
+      border: 1px solid #e5e5e5;
+      border-radius: 20px;
+    }
+
+    ul.list li .data,
+    ul.list li .solution,
+    ul.list li .ad,
+    ul.list li .api {
+      position: relative;
+    }
+
+    ul.list li .title {
+      padding-right: 32px;
+      line-height: 1.35;
+    }
+
+    ul.list li p.arrow {
+      top: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    ul.list li .arrow img {
+      transform: rotate(-90deg);
+      width: 24px;
+      display: block;
+    }
+
+
+    ul li .imgani {
+      width: 120px;
+      height: 120px;
+
+    }
+
+    ul li:first-child .imgani {
+      background-image: url(./images/icon_data.png);
+    }
+
+    ul li:first-child:hover .imgani {
+      background-image: url(./images/icon_data_play.png);
+      background-size: 10920px 120px;
+      animation: play 4s steps(91) infinite;
+
+    }
+
+    @keyframes play {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -10920px 0;
+      }
+    }
+
+    ul li:nth-child(2) .imgani {
+      background-image: url(./images/icon_solution.png);
+    }
+
+    ul li:nth-child(2):hover .imgani {
+      background-image: url(./images/icon_solution_play.png);
+      background-size: 11040px 120px;
+      animation: solutionplay 4s steps(92) infinite;
+      ;
+    }
+
+    @keyframes solutionplay {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -11040px 0;
+      }
+    }
+
+    ul li:nth-child(3) .imgani {
+      background-image: url(./images/icon_ad.png);
+    }
+
+    ul li:nth-child(3):hover .imgani {
+      background-image: url(./images/icon_ad_play.png);
+      background-size: 10920px 120px;
+      animation: play 4s steps(91) infinite;
+      ;
+    }
+
+    ul li:nth-child(4) .imgani {
+      background-image: url(./images/icon_api.png);
+    }
+
+    ul li:nth-child(4):hover .imgani {
+      background-image: url(./images/icon_api_play.png);
+      background-size: 10920px 120px;
+      animation: play 4s steps(91) infinite;
+
+    }
+
+    p.txt {
+      background-color: #f1f4fb;
+      padding: 10px 0;
+      text-align: center;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="list">
+    <li>
+      <a href="#">
+        <div class="data">
+          <p class="title">다양한<br /><strong>Data서비스</strong></p>
+          <p class="arrow"><img src="./images/icon_arrow.png" alt=""></p>
+        </div>
+        <p class="imgani"></p>
+        <p class="txt">Data One-Stop Service</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="solution">
+          <p class="title">혁신적인 <br /><strong>솔루션서비스</strong></p>
+          <p class="arrow"><img src="./images/icon_arrow.png" alt=""></p>
+        </div>
+        <p class="imgani"></p>
+        <p class="txt">상권분석, 시장 모니터링</p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <div class="ad">
+          <p class="title">스마트한<br /><strong>광고서비스</strong></p>
+          <p class="arrow"><img src="./images/icon_arrow.png" alt=""></p>
+        </div>
+        <p class="imgani"></p>
+        <p class="txt">최적의 고객 타겟팅</p>
+      </a>
+    </li>
+    <li>
+      <a href="#"></a>
+      <div class="api">
+        <p class="title">탁월한<br /><strong>API서비스</strong></p>
+        <p class="arrow"><img src="./images/icon_arrow.png" alt=""></p>
+      </div>
+      <p class="imgani"></p>
+      <p class="txt">Data 실시간 활용</p>
+      </a>
+    </li>
+  </ul>
+</body>
+
+</html>
