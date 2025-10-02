@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      display: none;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    section:first-child {
+      height: 100vh;
+      background: url(https://www.leeyoungji.co.kr/assets/images/bg01.jpg) center/cover;
+    }
+
+    section:first-child p {
+      text-align: center;
+    }
+
+    section.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="active" id="section1">
+    <p id="next" onclick="showSecondSection();">
+      <img src="https://www.leeyoungji.co.kr/assets/images/bubble.gif" alt="Click to Continue" />
+    </p>
+  </section>
+  <section id="section2">
+    <p>
+      <img src="https://www.leeyoungji.co.kr/assets/images/fall.gif" alt="fall" id="fallImage" />
+    </p>
+  </section>
+
+  <script>
+    // 첫 번째 섹션을 숨기고 두 번째 섹션을 보이게 만드는 함수
+    function showSecondSection() {
+      document.getElementById("section1").classList.remove("active");
+      document.getElementById("section2").classList.add("active");
+
+      // fall.gif 애니메이션의 예상 지속 시간 (예: 3초)
+      const gifDuration = 1500; // 3초 후 페이지 이동
+      setTimeout(() => {
+        window.location.href = "home.html";
+      }, gifDuration);
+    }
+  </script>
+</body>
+
+</html>
