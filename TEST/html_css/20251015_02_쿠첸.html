@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .main {
+      margin: 0 auto;
+      width: 1350px;
+    }
+
+    .txt {
+      text-align: center;
+    }
+
+    .content1 {
+      display: grid;
+      width: 1320px;
+      height: 540px;
+      grid-template-columns: repeat(4 1fr);
+      grid-template-rows: repeat(2 1fr);
+      gap: 10px;
+    }
+
+    .content1 p {
+      overflow: hidden;
+      border-radius: 3px;
+    }
+
+    .content1 p img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+
+    }
+
+
+    .content1 .item:nth-child(2) {
+      grid-column: 2;
+    }
+
+    .content1 .item:nth-child(3) {
+      grid-column: 3/5
+    }
+
+    .content1 .item:nth-child(4) {
+      grid-column: 1/3;
+    }
+
+    .content1 .item:nth-child(5) {
+      grid-column: 3;
+    }
+
+    .content1 .item:nth-child(6) {
+      grid-column: 4;
+    }
+
+    .content2 {
+      margin-top: 135px;
+    }
+
+    .content2 h3 {
+      font-size: 20px;
+    }
+
+    .content2 ul {
+      border: 1px solid #ddd;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .content2 ul li {
+      flex: 0 0 calc(100% /4);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content2 ul li img {
+      display: block;
+
+    }
+
+    .content3 {
+      margin-top: 135px;
+    }
+
+    .content3 h3 {
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <div class="txt">
+      <p><strong>쿠첸 B2B 사업은 고객사와 개인의 필요에 맞는 맞춤 제품 및 서비스 제공을 통해<br />
+          최상의 만족도를 제공해 드립니다.</strong></p>
+      <p>쿠첸은 2013년부터 현재까지 약 10년 이상의 전기레인지 자체 개발을 바탕으로 혁신적인 기술력과 신뢰성을 보유하고 있습니다.
+        국내 최초 하이브리드 기술의 전기레인지 개발을 시작으로 국내 최초 분리형 하방 배기 후드의 제조 및 생산, 국내 최다 27종 안정장치 기능 등
+        탄탄한 안정성을 기반으로 깐깐한 B2B 건설 시장을 리딩하고 있습니다.
+        최초 쿠첸을 경험하신 고객사는 검증된 기술, 우수한 디자인, 브랜드 신뢰를 바탕으로 꾸준히 쿠첸을 찾고 있습니다.
+        쿠첸 B2B 비즈니스는 고객사 및 개인 소비자분들의 최상의 만족도를 달성하기 위해 언제나 최선을 다하겠습니다.</p>
+    </div>
+    <div class="content1">
+      <p class="item"><img src="https://www.cuchen.com/img/b2b_info_01.jpg" alt=""></p>
+      <p class="item"><img src="https://www.cuchen.com/img/b2b_info_02.jpg" alt=""></p>
+      <p class="item"><img src="https://www.cuchen.com/img/b2b_info_03.jpg" alt=""></p>
+      <p class="item"><img src="https://www.cuchen.com/img/b2b_info_04.jpg" alt=""></p>
+      <p class="item"><img src="https://www.cuchen.com/img/b2b_info_05.jpg" alt=""></p>
+      <p class="item"><img src="https://www.cuchen.com/img/b2b_info_06.jpg" alt=""></p>
+    </div>
+    <div class="content2">
+      <h3>이미 많은 유수의 기업들이 쿠첸을 선택하고 있습니다.</h3>
+
+      <ul>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_01.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_02.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_03.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_04.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_05.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_11.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_07.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_08.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_09.svg" alt=""></p>
+        </li>
+        <li>
+          <p><img src="https://www.cuchen.com/img/b2b_logo_10.svg" alt=""></p>
+        </li>
+      </ul>
+
+    </div>
+    <div class="content3">
+      <h3>고객사와 개인 소비자분들의 편의를 위해 전국 어디에서나 가까이, 그리고 빠르게 A/S 및 사후관리를 제공하고 있습니다.</h3>
+      <p><img src="https://www.cuchen.com/img/as_map.jpg" alt=""></p>
+    </div>
+  </div>
+</body>
+
+</html>

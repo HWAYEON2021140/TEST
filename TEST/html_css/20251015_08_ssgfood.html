@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: 'NanumBarunGothic';
+      src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'NanumBarunGothic';
+      src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'NanumBarunGothic';
+      src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+      font-weight: 300;
+      font-display: swap;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .i-txt p {
+      text-align: center;
+      margin: 20px;
+      font-family: 'NanumBarunGothic';
+      font-size: 34px;
+      line-height: 48px;
+    }
+
+    section {
+      width: 95%;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    section ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      height: 424px;
+      width: 100%;
+    }
+
+    section ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      position: relative;
+      color: #fff;
+
+    }
+
+    section ul li::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    section ul li:nth-child(1) {
+      background-image: url(https://www.shinsegaefood.com/images/management/bg_info_1.jpg);
+    }
+
+    section ul li:nth-child(2) {
+      background-image: url(https://www.shinsegaefood.com/images/management/bg_info_2.jpg);
+    }
+
+    section ul li:nth-child(3) {
+      background-image: url(https://www.shinsegaefood.com/images/management/bg_info_3.jpg);
+    }
+
+    section ul li .txt {
+      position: relative;
+      z-index: 1;
+      font-family: 'NanumBarunGothic';
+    }
+
+    section ul li .txt h2 {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+
+    section ul li:hover::after {
+      background: rgba(0, 0, 0, 0.7);
+
+    }
+
+    section ul li .txt p {
+      font-size: 15px;
+      line-height: 22px;
+
+    }
+
+    section ul li:hover .txt h2 {
+      color: #e88d66;
+    }
+
+    @media screen and (max-width: 960px) {
+      section ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="i-txt">
+    <p>명확한 비전과 전략으로 최고의 투자 가치를 실현하는 신세계푸드</p>
+  </div>
+  <section>
+    <ul>
+      <li>
+        <div class="txt">
+          <h2>경영정보</h2>
+          <p>주주 및 이사회 구성을<br />안내해 드립니다</p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h2>재무정보</h2>
+          <p>영업현황 및 재무제표를<br />안내해 드립니다</p>
+        </div>
+      </li>
+      <li>
+        <div class="txt">
+          <h2>주식정보</h2>
+          <p>주가정보를<br />안내해 드립니다</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+
+</body>
+
+</html>

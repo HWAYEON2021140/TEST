@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .main {
+      border: 1px solid #ddd;
+      margin: 0 auto;
+
+      width: 940px;
+    }
+
+    .news-top {
+      display: grid;
+      margin: 0 auto;
+      position: relative;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "pic news-txt";
+      gap: 40px 20px;
+    }
+
+
+
+    .news-top>p {
+      grid-area: pic;
+      width: 100%;
+    }
+
+    .news-top>p img {
+      display: block;
+    }
+
+    .news-top .txt {
+      grid-area: news-txt;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>
+    신세계푸드의 다양한 대내외 소식 및 행사를 알려드립니다.
+  </h2>
+
+  <div class="main">
+    <div class="news-top">
+      <p><img src="https://www.shinsegaefood.com/uimages/2025/10/16/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C-1.jpg" alt="">
+      </p>
+      <div class="txt">
+        <h5>베이커리 명가 ‘신세계푸드’와 베이커리 ‘박준서 명장’이 만나다</h5>
+        <p>신세계푸드, SSG닷컴 오프라인 페스타 ‘美지엄’에 베이커리 박준서 명장 부스 선보여 박준서 명장, 대한민국 제과제?빵 명장으로 주요 베이커리 대회 다수 수상 경력 신세계푸드, 박준서 명장
+          베이커리
+          5종 선보여… 행사 현장 QR통해 최대 44% 할인 제공</p>
+      </div>
+    </div>
+  </div>
+  <div class="other-news">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
+</body>
+
+</html>

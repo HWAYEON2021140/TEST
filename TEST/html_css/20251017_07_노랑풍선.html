@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .w-trable {
+      width: 95%;
+      max-width: 1480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .w-trable li {
+      display: flex;
+      gap: 104px;
+      align-items: center;
+      height: 440px;
+
+
+    }
+
+    .w-trable li .txt {
+      flex-shrink: 0;
+      width: 440px;
+    }
+
+    .w-trable li .img {
+      border-radius: 10px;
+      height: 100%;
+      overflow: hidden;
+
+
+    }
+
+    .w-trable li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      aspect-ratio: 18/11;
+    }
+
+    .w-trable li:nth-child(even) {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+
+
+    .txt p {
+      color: gray;
+      display: block;
+      font-size: 1.5rem;
+      letter-spacing: -0.075rem;
+    }
+
+    .txt h4 {
+      font-size: 3rem;
+      letter-spacing: -0.15rem;
+      font-weight: 400;
+    }
+
+    .txt h3 {
+      font-size: 3rem;
+      color: #ffc72c;
+      letter-spacing: -0.15rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      .w-trable li {
+        height: auto;
+        gap: 80px;
+      }
+
+      .w-trable li .img {
+        width: 60%;
+      }
+
+      .w-trable li .txt {
+        width: 30%;
+        font-size: 1.375rem;
+      }
+
+      .txt p {
+        font-size: 1rem;
+      }
+
+      .txt h4 {
+        font-size: 1.375rem;
+        letter-spacing: -0.15rem;
+        font-weight: 400;
+      }
+
+      .txt h3 {
+        font-size: 1.375rem;
+        color: #ffc72c;
+        letter-spacing: -0.15rem;
+      }
+
+      .w-trable li:nth-child(even) {
+        flex-direction: row-reverse;
+        text-align: left;
+      }
+    }
+
+
+    @media screen and (max-width: 750px) {
+      .w-trable li {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+      }
+
+      .w-trable li:nth-child(even) {
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .w-trable li .img {
+        width: 100%;
+      }
+
+      .w-trable li .txt {
+        width: 100px;
+      }
+
+
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="con1">
+    <h2>노랑풍선이 바라는 여행</h2>
+    <ul class="w-trable">
+      <li>
+        <p class="img"><img src="https://company.ybtour.co.kr/images/bg/bg_story_1.jpg" alt=""></p>
+        <div class="txt">
+          <p>여행의 새로운 가치를 알립니다</p>
+          <h4>가치를 전달하는 여행</h4>
+          <h3>Value-Creating</h3>
+        </div>
+      </li>
+      <li>
+        <p class="img"><img src="https://company.ybtour.co.kr/images/bg/bg_story_2.jpg" alt=""></p>
+        <div class="txt">
+          <p>고객의, 고객에 의한, 고객을 위한</p>
+          <h4>신뢰를 받는 여행</h4>
+          <h3>Trustworthy</h3>
+        </div>
+      </li>
+      <li>
+        <p class="img"><img src="https://company.ybtour.co.kr/images/bg/bg_story_3.jpg" alt=""></p>
+        <div class="txt">
+          <p>일상의 가장 반짝이는 순간을 만듭니다</p>
+          <h4>즐거움을 선사하는 여행</h4>
+          <h3>Joyful</h3>
+        </div>
+      </li>
+      <li>
+        <p class="img"><img src="https://company.ybtour.co.kr/images/bg/bg_story_4.jpg" alt=""></p>
+        <div class="txt">
+          <p>다양한 여행상품으로 여행 문화를 선도합니다</p>
+          <h4>혁신적인 여행</h4>
+          <h3>Innovative</h3>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
