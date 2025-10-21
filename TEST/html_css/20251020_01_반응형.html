@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      border: 4px solid #000;
+      font-size: 0;
+    }
+
+    #wrap div {
+      font-size: 16px;
+      width: 31.25%;
+      display: inline-block;
+    }
+
+    #wrap div:first-child {
+      margin-right: 37.5%;
+      padding: 50px 5.2%;
+      background: #1f518b;
+    }
+
+    #wrap div:first-child+div {
+      margin-left: 37.5%;
+      padding: 130px 5.2083333333%;
+      background: #f7e041;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="container">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</body>
+
+</html>
