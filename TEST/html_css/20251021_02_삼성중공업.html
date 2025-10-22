@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .samsung {
+      margin: 0 auto;
+      max-width: 1620px;
+    }
+
+    span {
+      display: block;
+      text-align: right;
+      margin-top: 10px;
+      color: #666;
+      font-size: 16px;
+    }
+
+    h3 {
+      font-size: 50px;
+      line-height: 6rem;
+      font-weight: bold;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 2rem;
+    }
+
+    .ct ul {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .ct ul li {
+      flex: 0 1 calc((100% - 120px*2)/3);
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: relative;
+      padding: 50px;
+      box-sizing: border-box;
+    }
+
+    .ct ul li p {
+      text-align: center;
+      margin-bottom: 10px;
+      justify-content: space-between;
+    }
+
+    .ct ul li p:first-child {
+      font-size: 18px;
+      color: #111;
+      line-height: 1;
+      font-weight: 500;
+      font-size: 22px;
+    }
+
+    .ct ul li p:last-child {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1
+    }
+
+    .ct ul li::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: #111;
+    }
+
+    .ct ul li:nth-child(n+4)::after {
+      content: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="samsung">
+    <h3>삼성중공업 주식회사</h3>
+    <span>[기준일 2024.12.31]</span>
+    <div class="ct">
+      <ul>
+        <li>
+          <p>대표이사</p>
+          <p>최성안</p>
+        </li>
+        <li>
+          <p>창립일</p>
+          <p>1974년 8월 5일</p>
+        </li>
+        <li>
+          <p>종업원수</p>
+          <p>10,112명</p>
+        </li>
+        <li>
+          <p>자본금</p>
+          <p>8,801억원</p>
+        </li>
+        <li>
+          <p>매출액</p>
+          <p>99,031억</p>
+        </li>
+        <li>
+          <p>총자산</p>
+          <p>169,979억원</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
