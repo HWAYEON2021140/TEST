@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .user-ground {
+      max-width: 1520px;
+      width: 95%;
+      margin: 0 auto;
+      padding-bottom: 100px;
+    }
+
+    .ground {
+      display: flex;
+      max-width: 1520px;
+      flex-wrap: wrap;
+      gap: 40px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    h4 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 100px;
+    }
+
+    .ground li {
+      width: calc((100% - 80px)/3);
+      border: #ebebeb 1px solid;
+      border-radius: 20px;
+      box-sizing: border-box;
+      height: 220px;
+    }
+
+    .ground li>a {
+      position: relative;
+      display: block;
+      padding: 48px;
+      justify-content: center;
+
+
+    }
+
+    .ground li h5 {
+      grid-column: 1;
+      margin: 0 0 50px;
+      font-size: 24px;
+    }
+
+
+    .ground li span {
+      grid-column: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #999;
+      bottom: 10px;
+    }
+
+
+    .ground li span::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url(https://www.gspower.co.kr/pub/images/arrow_yard.svg) no-repeat center;
+    }
+
+    .ground li p {
+      position: absolute;
+      top: 50%;
+      right: 48px;
+      transform: translateY(0%);
+      width: 72px;
+      height: auto;
+
+    }
+
+    .ground li p img {
+      width: 72px;
+      height: auto;
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      .ground {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+
+      }
+
+      .ground li {
+        width: 100%;
+        flex: 1;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h4>고객마당</h4>
+  <div class="user-ground">
+    <ul class="ground">
+      <li>
+        <a href="#">
+          <h5>열요금정보</h5>
+          <span>VIEW MORE</span>
+          <p><img src="https://www.gspower.co.kr/pub/images/icon_customer_yard01.svg" alt=""></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h5>설비정보</h5>
+          <span>VIEW MORE</span>
+          <p><img src="https://www.gspower.co.kr/pub/images/icon_customer_yard02.svg" alt=""></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h5>교육정보</h5>
+          <span>VIEW MORE</span>
+          <p><img src="https://www.gspower.co.kr/pub/images/icon_customer_yard03.svg" alt=""></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h5>세대정보</h5>
+          <span>VIEW MORE</span>
+          <p><img src="https://www.gspower.co.kr/pub/images/icon_customer_yard04.svg" alt=""></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h5>자료실</h5>
+          <span>VIEW MORE</span>
+          <p><img src="https://www.gspower.co.kr/pub/images/icon_customer_yard05.svg" alt=""></p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h5>공지사항</h5>
+          <span>VIEW MORE</span>
+          <p><img src="https://www.gspower.co.kr/pub/images/icon_customer_yard06.svg" alt=""></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
