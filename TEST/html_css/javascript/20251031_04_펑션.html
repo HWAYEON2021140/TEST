@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>함수호출</p>
+  <script>
+    function myfnc() {
+      document.write("자바스크립트");
+    }
+    document.querySelector("p").onclick = function () {
+      myfnc();
+    };
+    function myFunction(a, b) {
+      return arguments.length;
+    }
+    document.write(myFunction(10, 20));
+    function my() {
+      return (20 / 10) * (10 + 30);
+    }
+    document.write(my); 
+  </script>
+</body>
+
+</html>
