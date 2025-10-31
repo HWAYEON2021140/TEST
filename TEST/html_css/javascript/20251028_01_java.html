@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li><a href="#">photo1</a></li>
+    <li><a href="#">photo2</a></li>
+    <li><a href="#">photo3</a></li>
+  </ul>
+  <p><img src="../images/photo1.jpg" alt=""></p>
+  <script>
+
+
+
+
+
+    photo.forEach(function (v, k) {
+      v.onclick = function (e) {
+        e.preventDefalt();
+        photoImg.Src = "../html_css/images/photo" + (k + 1) + ".jpg";
+      };
+    });
+
+
+    photo.forEach(function (v, k) {
+      v.onclick = function (e) {
+        e.preventDefalt();
+        let.imgSrc = photoImg.getAttribute("src");
+        let newSrc = imgSrc.replace(imgSrc.slice(-5, -4), k + 1);
+        let imgAlt = photoImg.getAttribute("alt");
+        let newAlt = imgAlt.replace(imgAlt.slice(-1), K + 1);
+        photoImg.setAttribute("src", newSrc);
+        photoImg.setAttribute("alt", newAlt);
+      };
+    });
+
+  </script>
+</body>
+
+</html>

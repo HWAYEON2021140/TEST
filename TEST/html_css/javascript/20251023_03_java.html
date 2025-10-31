@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .list {
+      background-color: lightskyblue !important;
+    }
+  </style>
+  <script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Demo JavaScript in Head</h2>
+  <p id="demo">A Paragraph</p>
+  <ul>
+    <li class="list">1</li>
+    <li class="list">2</li>
+    <li class="list">3</li>
+    <li class="list">4</li>
+    <li class="list">5</li>
+  </ul>
+  <!-- <button type="button" onclick="myFunction()">Try it</button> -->
+  <button type="button" id="btn">Try it</button>
+  <script>
+    document.getElementById("btn").onclick = function () {
+      myFunction();
+    };
+    document.getElementsByClassName("list")[0].style.color = "red";
+    document.getElementsByClassName("list")[1].style.backgroundColor = "yellow";
+    document.getElementsByClassName("list")[2].style.border = "1px solid blue";
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #demo {
+      width: 630px;
+      height: 630px;
+      margin: 50px auto;
+
+    }
+
+    #clock {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    #clock>div {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #clock>div#base {
+      background: url(../time_images/clock_bg.png);
+    }
+
+    #clock>div#hour {
+      background: url(../time_images/hour.png);
+    }
+
+    #clock>div#minute {
+      background: url(../time_images/minute.png);
+    }
+
+    #clock>div#second {
+      background: url(../time_images/second.png) center/630px 630px;
+    }
+
+    #clock>div#center {
+      background: url(../time_images/center_bg.png);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="demo">
+    <div id="clock">
+      <div id="base"></div>
+      <div id="hour"></div>
+      <div id="minute"></div>
+      <div id="second"></div>
+      <div id="center"></div>
+    </div>
+  </div>
+  <script>
+    function clock() {
+      let now = new Date();
+      let hour = now.getHours();
+      let minute = now.getMinutes();
+      let second = now.getSeconds();
+      document.getElementById("hour").style.transform = `rotate(150deg)`
+    }
+    setInterval(clock, 1);
+  </script>
+</body>
+
+</html>

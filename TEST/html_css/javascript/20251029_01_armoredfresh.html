@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link="stylesheet" type="text/css" href="../웹폰트/xeicon.min.css">
+    <link="stylesheet" type="text/css" href="../웹폰트/xeicon.css">
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        ul {
+          list-style: none;
+        }
+
+        h4 {
+          font-weight: 700;
+          color: #d1a050;
+        }
+
+        .con ul {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .con ul li p:last-child {
+          height: 0;
+          overflow: hidden;
+        }
+
+        .con ul .con ul li {
+          font-family: xeicon;
+          content: "";
+        }
+
+        .icon {
+          font-family: xeicon;
+        }
+      </style>
+</head>
+
+<body>
+  <div class="con">
+    <h4>RETAIL</h4>
+    <ul> Slices - Almond Base
+      <li>
+        <span class="icon">&#ec2e;</span>
+        <p>AMERICAN</p>
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-AMERICAN-pc.jpg" alt=""></p>
+      </li>
+      <li>
+        CHEDDAR
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-CHEDDAR-pc.jpg" alt=""></p>
+      </li>
+      <li>
+        PROVOLONE
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PROVOLONE-pc.jpg" alt="">
+        </p>
+      </li>
+      <li>
+        PEPPER JACK
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-ALMONDBASE-PEPPERJACK-pc.jpg" alt="">
+        </p>
+      </li>
+    </ul>
+
+    <ul>Slices - Oat Base
+      <li>
+        AMERICAN
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-AMERICAN-pc.jpg" alt=""></p>
+      </li>
+      <li>
+        CHEDDAR
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-CHEDDAR-pc.jpg" alt=""></p>
+      </li>
+      <li>
+        PROVOLONE
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PROVOLONE-pc.jpg" alt=""></p>
+      </li>
+      <li>
+        PEPPER JACK
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SLICES-OATBASE-PEPPERJACK-pc.jpg" alt=""></p>
+      </li>
+    </ul>
+    <ul>Cubes - Almond Base
+      <li>CHEDDAR
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/CUBES-ALMONDBASE-CHEDDAR-pc.jpg" alt=""></p>
+      </li>
+      <li>PLAIN
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/CUBES-ALMONDBASE-PLAIN-pc.jpg" alt=""></p>
+      </li>
+      <li>BLUEBERRY
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/CUBES-ALMONDBASE-BLUEBERRY-pc.jpg" alt=""></p>
+      </li>
+    </ul>
+  </div>
+  <div class="con">
+    <h4 style="font-weight: 700; color: #d1a050;">FOOD SERVICE</h4>
+    <ul>Spread - Oat Base
+      <li>SPICY JALAPENO
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SPREAD-OATBASE-SPICYJALAPENO-pc.jpg" alt="">
+        </p>
+      </li>
+      <li>PLAIN
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SPREAD-OATBASE-PLAIN-pc.jpg" alt=""></p>
+      </li>
+      <li>GARLIC HERB
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SPREAD-OATBASE-GARLICHERB-pc.jpg" alt=""></p>
+      </li>
+    </ul>
+    <ul>Shreds - Oat Base
+      <li>MOZZARELLA
+        <p><img
+            src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/SHREDS-OATBASE-MOZZARELLA1-pc.jpg?v=1761550963"
+            alt=""></p>
+      </li>
+    </ul>
+    <ul>Bulk Slices - Oat Base
+      <li>BULK SLICES
+        <p><img src="https://d29wx3mrk1ysd0.cloudfront.net/_img/sub231114/BULKSLICES-OATBASE-pc.jpg" alt=""></p>
+      </li>
+    </ul>
+
+
+    <script>
+      let brn = document.querySelectorAll(".con ul li");
+      let plus = document.querySelectorAll("p span")
+      btn.forEach(function (v, k, ar) {
+        v.onclick = function () {
+          let showCon = this.querySelector("span").classList.contain("on");
+          console.log(showCon);
+          if (showCon) {
+            this.querySelector("span").classList.add("on");
+            this.getElementByTagName("p")[1].classList.add("on");
+          } else {
+            plus.forEach(function (v) {
+              v.classList.remove("on");
+            });
+            detail.forEach(function (v) {
+              v.classList.remove("on");
+            });
+            this.querySelector("span").classList.add("on");
+            this.getElementByTagName("p")[1].classList.add("on");
+          }
+        };
+      });
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @charset "utf-8";
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+    body {
+      background: #000;
+      font-weight: 700;
+      font-family: 'pretendard'
+    }
+
+    #sample {
+      position: relative;
+      height: 200vh;
+      font-size: 4vw;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    #sample .txt_area {
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50vh 0;
+    }
+
+    #sample .txt_area p {
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    #sample .txt_area p+p {
+      margin-left: 10px;
+    }
+
+    #sample .txt_area .word01,
+    #sample .txt_area .word02 {
+      opacity: 0;
+      width: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <article id="sample">
+    <div class="inner txt_area">
+      <p>AI 기술</p>
+      <p class="txt word01">+ 콘텐츠 혁신</p>
+      <p class="txt word02">+ 샘플의 전문 노하우</p>
+    </div>
+  </article>
+
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script>
+    // 플러그인 등록
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#sample',
+        start: '30% center',
+        end: '101% bottom',
+        scrub: 1
+        // markers: true,   // 디버그용
+      }
+    });
+
+    tl.fromTo('.word01',
+      { width: 0, opacity: 0 },
+      { width: 'auto', opacity: 1, duration: 1.2, ease: 'power2.out' }
+    )
+      .fromTo('.word02',
+        { width: 0, opacity: 0 },
+        { width: 'auto', opacity: 1, duration: 1.2, ease: 'power2.out' }
+      );
+  </script>
+
+</body>
+
+</html>

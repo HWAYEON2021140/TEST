@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<div id="demo"></div>
+
+<body>
+  <script>
+    function clock() {
+      let now = new Date();
+
+      let hours = now.getHours();
+      let minute = now.getMinutes();
+      let seconds = now.getSeconds();
+      let milliseconds = now.getMilliseconds();
+      let time = `${hour} : ${minute} : ${second} : ${millsecond}`;
+      document.getElementById("demo").innerText = time;
+    }
+
+    setInterval(clock, 1);
+
+  </script>
+</body>
+
+</html>

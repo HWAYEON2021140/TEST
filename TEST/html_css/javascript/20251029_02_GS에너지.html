@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../웹폰트/xeicon.css">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: 'xeicon';
+      src: url(../웹폰트/xeicon.ttf);
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .list-con li p img {
+      width: 1520px;
+      margin: 0 auto;
+
+    }
+
+    ul.list-con li p:last-child {
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    ul.list li p:last-child.on {
+      height: 400px;
+    }
+
+    .xi-plus:before {
+      content: "\002D";
+    }
+  </style>
+</head>
+
+
+<body>
+  <ul class="list-con">
+    <li>
+      <p>GS파워</p>
+      <span class="xi-plus"></span>
+      <p><img src="https://www.gsenergy.co.kr/pub/images/img_collective_a01.jpg" alt=""></p>
+      <h4>GS파워는 한국전력공사의 발전부문 매각과 한국지역난방공사 공기업 민영화 작업의 일환으로 정부가 시행한 안양/부천 열병합 발전 및 지역난방설비에 대한 공개경쟁입찰에서 인수자로 최종 결정되어,
+        2000년 6월 22일 자산양수도 계약을 체결하고, 그 해 9 월 1일 본격적인 운영을 시작하였습니다.</h4>
+    </li>
+    <li>
+      <p>인천종합에너지</p>
+      <span></span>
+      <p><img src="https://www.gsenergy.co.kr/pub/images/img_collective_b01.jpg" alt=""></p>
+      <h4>인천종합에너지는 2004년 6월, 송도국제도시를 중심으로 인천지역의 원활한 지역 냉 난방 공급과 국가에너지절약에 기여하기 위해 설립되었습니다. 당사는 편리하고 안전하게 지역 냉 난방을 공급하고
+        열공급원가를 절감하기 위해 지속적으로 노력해오고 있습니다.</h4>
+    </li>
+    <script>
+      let brn = document.querySelectorAll(".list-con li");
+      let plus = document.querySelectorAll("span")
+      btn.forEach(function (v, k,) {
+        v.onclick = function () {
+          let ht = this.querySelector(".con").cloentHeight;
+          console.log(showCon);
+          if (showCon) {
+            this.querySelector(".title span").classList.remove("on");
+            this.querySelector(".contents")[1].style.height = 0;
+          } else {
+            plus.forEach(function (v) {
+              v.classList.remove("on");
+            });
+            detail.forEach(function (v) {
+              v.style.height = 0;
+            });
+            this.querySelector(".title span").classList.add("on");
+            this.querySelector(".contents")[1].style.height = 0;
+          }
+        };
+      });      
+    </script>
+  </ul>
+</body>
+
+</html>

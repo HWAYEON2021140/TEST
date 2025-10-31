@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../웹폰트/xeicon.css">
+  <style>
+    @font-face {
+      font-family: 'xeicon';
+      src: url(../웹폰트/xeicon.ttf);
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul.list {
+      width: 1200px;
+      margin: 50px auto;
+    }
+
+    ul.list .list_head {
+      padding: 40px 0;
+    }
+
+    .list-head>p {
+      font-size: 24px;
+      color: #5d0ca4;
+    }
+
+    ul.list .list-head .txt {
+      position: relative;
+      padding-top: 24px;
+
+    }
+
+    .view {
+      content: "\e944";
+      font-family: "xeicon";
+      display: block;
+    }
+
+    .arrow {
+      content: "\e978";
+      font-family: "xeicon";
+      display: block;
+    }
+
+    ul.list .list_head>p {
+      font-size: 24px;
+      color: #5d0ca4;
+    }
+
+    ul.list .list_head .txt {
+      position: relative;
+      padding-top: 24px;
+    }
+
+    ul.list .list_head .txt .btn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    ul.list .list_inner {
+      display: flex;
+      justify-content: space-between;
+      height: 0;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+
+    ul.list .list_inner.on {
+      height: 100px;
+    }
+
+    ul.list .list_inner>div {
+      background-color: #f6f6f7;
+      width: calc((100% - 20px) / 2);
+      height: 100%;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+  </style>
+
+</head>
+
+<body>
+  <ul class="list">
+    <li>
+      <div class="list_head">
+        <p>
+          ICT 마케팅<a href="#"><span></span></a>
+        </p>
+        <div class="txt">
+          <p>통신 단말기 중심의 ICT유통 및 물류 사업을 수행하고 있습니다.</p>
+          <a href="#" class="btn"><span class="view">자세히보기</span>
+            <span class="arrow"></span></a>
+        </div>
+      </div>
+      <div class="list_inner">
+        <div>
+          <strong>사업 영역</strong>
+          <p>
+            휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통
+          </p>
+        </div>
+        <div>
+          <strong>FY2024 매출액</strong>
+          <p>4조 2,759억 원</p>
+        </div>
+      </div>
+    </li>
+    <li>
+
+
+    <li>
+      <div class="list_head">
+        <p>
+          민팃<a href="#"><span></span></a>
+        </p>
+        <div class="txt">
+          <p>간편하고 신뢰할 수 있는 중고 ICT Device 플랫폼으로서 자원 순환을 선도합니다.</p>
+          <a href="#" class="btn"><span class="view">자세히보기</span>
+            <span class="arrow"></span></a>
+        </div>
+      </div>
+      <div class="list_inner">
+        <div>
+          <strong>사업 영역</strong>
+          <p>
+            AI 기반 중고폰 매입기 '민팃 ATM' 운영
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="list_head">
+        <p>
+          엔코아<a href="#"><span></span></a>
+        </p>
+        <div class="txt">
+          <p>데이터 비즈니스 전문 기업으로서 기업의 지속가능한 데이터 관리와 활용을 지원합니다.</p>
+          <a href="#" class="btn"><span class="view">자세히보기</span>
+            <span class="arrow"></span></a>
+        </div>
+      </div>
+      <div class="list_inner">
+        <div>
+          <strong>사업 영역</strong>
+          <p>Enterprise AI Platform, 데이터 컨설팅, 데이터 솔루션 DATAWARE™ 등</p>
+        </div>
+        <div>
+          <strong>FY2024 매출액</strong>
+          <p>313억 원</p>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="con-head">
+        <p>엔코아</p>
+        <p>Enterprise AI Platform, 데이터 컨설팅, 데이터 솔루션 DATAWARE™ 등</p>
+        <p>자세히보기</p>
+      </div>
+      <span></span>
+      <div class="item-l">
+        <p>사업영역</p>
+        <p>휴대폰 단말기 도매, 물류 서비스, ICT Device/Accessory B2B 유통</p>
+      </div>
+      <div class="litm-r">
+        <p>FY2024 매출액</p>
+        <p>313억 원</p>
+      </div>
+    </li>
+  </ul>
+  <script>
+    let btn = document.querySelectorAll(".btn");
+    btn.forEach(function () {
+      v.onclick = function () {
+        let parent = this.parentElement.parentElement.parentElement;
+        let showCon = parant.querySelector(".list_inner").classList.contain("on");
+
+        if (showCon) {
+          parant.querySelector(".list_inner").classList.remove("on");
+        } else {
+          parant.querySelector(".list_inner").classList.add("on");
+          this.querySelector(".view").innerText = "닫기";
+          this.querySelector(".arrow")
+        }
+      }
+    })
+
+  </script>
+</body>
+
+</html>

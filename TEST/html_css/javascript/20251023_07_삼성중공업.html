@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .skill {
+      width: 950px;
+      margin: 50px auto;
+    }
+
+    .skill .btn {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .skill .btn li {
+      flex: 1;
+      text-align: center;
+      padding: 20px 0;
+      background-color: #eee;
+      cursor: pointer;
+    }
+
+    .skill .con {
+      height: 300px;
+      position: relative;
+    }
+
+    .skill .con li {
+      height: 100%;
+      width: 100%;
+      background: #ccc;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: none;
+    }
+
+    .on {
+      background: #000;
+      color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="skill">
+    <ul class="btn">
+      <li>조선</li>
+      <li>해양</li>
+      <li>엔지니어링</li>
+    </ul>
+    <ul class="con">
+      <li>조선 컨텐츠</li>
+      <li>해양 컨텐츠</li>
+      <li>엔지니어링 컨텐츠</li>
+    </ul>
+  </div>
+  <script>
+    document.querySelectorAll(".btn li")[0].classList.add("on");
+    document.querySelectorAll(".con li")[0].style.display = "block";
+
+    function myfnc() {
+      document.querySelectorAll(".btn li").forEach(function (v) {
+
+        v.classList.remove("on");
+      }); {
+        document.querySelectorAll(".con li").forEach(function (v) {
+          v.style.display = "none";
+        });
+
+        document
+        v.onclick = function () {
+          console.log(v);
+          console.log(i);
+          console.log(ar);
+          ar.forEach(function (v) {
+            v.classList.remove("on");
+            document.querySelectorAll(".con li")[i].style.display = "none";
+          });
+          v.classList.add("on");
+          document.querySelectorAll(".con li").forEach(function (v) {
+            v.style.display = "none";
+          });
+          document.querySelectorAll(".con li")[i].style.display = "block";
+        };
+      };
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    const cars1 = ["Saab", "Volvo", "BMW"];
+    document.write(cars[1] + "<br>");
+    const cars = []
+    cars[0] = "Saab";
+    cars[1] = "Volvo";
+    cars[2] = "BMW";
+
+    const car2 = new Array("Saab", "Volvo", "BMW");
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.write(fruits.join(" ") + "<br>");
+    fruits.pop();
+    document.write(fruits.join(" ") + "<br>");
+    fruits.push("Kiwi");
+    document.write(fruits.join(" ") + "<br>");
+    fruits.shift();
+    document.write(fruits.join(" ") + "<br>");
+    fruits.unshift("Lemon");
+    document.write(fruits.join(" ") + "<br>");
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    const myChildren = myGirls.concat(myBoys);
+    document.write(myChildren + "<br>");
+    myChildren.splice(2, 1, "홍길동");
+    document.write(myChildren + "<br>");
+    myChildren.sort();
+    document.write(myChildren + "<br>");
+    myChildren.reverse();
+    car2.sort().reverse();
+    document.write(car2 + "<br>");
+    const arr1 = ["아반떼", "소나타", "그랜저", "제네시스", "SM5"];
+    const obj1 = { color: "파랑", size: "20px", width: "300px" };
+    document.write(Object.keys(arr1) + "<br>");
+    document.write(Object.keys(arr1) + "<br>");
+
+    document
+
+
+
+  </script>
+
+</body>
+
+</html>
