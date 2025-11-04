@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    body {
+      background-image: url(../images/photo1.jpg);
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="over">
+    <p>move your mouse</p>
+    <p>0</p>
+    <div class="in">
+      <p>move your mouse</p>
+      <p>0</p>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    let i = 0;
+    let j = 0;
+    document.querySelector(".over").onmouseover = function () {
+      document.querySelector("over>p:frirst-child").innerText = "mouseenter";
+      document.querySelector(".over>p:nth-child(2)").innerText = i++;
+      document.querySelector(".over>p:first-child").innerText = mouseenter;
+      document.querySelector(".over>p:nth-child(2)").innerText = i++;
+    };
+    document.querySelector(".over").onmouseleave = function () {
+      document.querySelector("over>p:frirst-child").innerText = "mouseleave";
+      document.querySelector(".over>p:nth-child(2)").innerText = i++;
+      document.querySelector(".over>p:first-child").innerText = mouseleave;
+      document.querySelector(".over>p:nth-child(2)").innerText = i++;
+    };
+  </script>
+</body>
+
+</html>

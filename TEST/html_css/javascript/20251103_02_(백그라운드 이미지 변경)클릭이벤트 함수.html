@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    body {
+      background-image: url(../images/photo1.jpg);
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="demo">
+    이벤트발생
+  </p>
+  <p id="con"></p>
+  <script>
+    document.querySelector("#demo").onclick = () => {
+      document.querySelector("#con").innerText = "클릭이벤트 발생";
+    };
+    document.querySelector("#demo").addEventListener("click", () => {
+      document.querySelector("#con").innerText = "클릭이벤트 발생";
+    })
+
+    function myfnc() {
+      document.querySelector("#con").innerText = "클릭이벤트 발생";
+    }
+    document.querySelector("#demo").addEventListener("click", function () {
+      myfnc();
+    });
+    document.querySelector("#demo").addEventListener("mouseenter", myfnc);
+
+  </script>
+</body>
+
+</html>
