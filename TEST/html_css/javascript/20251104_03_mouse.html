@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        margin: 1000px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>clientX: <input type="text" id="clientX" /></p>
+    <p>clientY: <input type="text" id="clientY" /></p>
+    <p>pageX: <input type="text" id="pageX" /></p>
+    <p>pageY: <input type="text" id="pageY" /></p>
+    <p>screenX: <input type="text" id="screenX" /></p>
+    <p>screenY: <input type="text" id="screenY" /></p>
+
+    <script>
+      document.onmousemove = function (e) {
+        document.getElementById("clientX").value = e.clientX;
+        document.getElementById("clientY").value = e.clientY;
+        document.getElementById("pageX").value = e.pageX;
+        document.getElementById("pageY").value = e.pageY;
+        document.getElementById("screenX").value = e.screenX;
+        document.getElementById("screenY").value = e.screenY;
+      };
+    </script>
+  </body>
+</html>
