@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .custompoint {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        background-image: url(cdn.imweb.me/upload/S2024112577c82953a84f/19e96870be74c.png);
+        background-repeat: no-repeat;
+        background-size: 45px 57px;
+        z-index: 999;
+        border: 1px solid #000;
+        background-position: right bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custompoint"></div>
+
+    <script>
+      let cursor = document.querySelector(".custompoint");
+    </script>
+  </body>
+</html>

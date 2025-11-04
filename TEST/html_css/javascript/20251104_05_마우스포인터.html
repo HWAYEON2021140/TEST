@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+
+      .custompoint {
+        position: fixed;
+        left: -200px;
+        top: -200px;
+        width: 60px;
+        height: 60px;
+        background-image: url();
+        background-repeat: no-repeat;
+        background-size: 45px 57px;
+        z-index: 999;
+        border: 1px solid #000;
+        background-position: right bottom;
+        animation: move 1s infinite;
+      }
+      @keyframes move {
+        0% {
+          transform: transrate(-50%, -50%) scale(1);
+        }
+        50% {
+          transform: transrate(-50%, -50%) scale(2);
+        }
+        100% {
+          transform: transrate(-50%, -50%) scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custompoint"></div>
+
+    <script>
+      let cursor = document.querySelector(".custompoint");
+      document;
+    </script>
+  </body>
+</html>
