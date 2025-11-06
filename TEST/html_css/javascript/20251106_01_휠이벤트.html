@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      section {
+        height: 4100px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+    <script>
+      window.addEventListener("wheel", function (e) {
+        console.log(e.deltaY);
+        if (e.deltaY > 0) {
+          console.log("down");
+        } else {
+          console.log("up");
+        }
+      });
+    </script>
+  </body>
+</html>
