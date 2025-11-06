@@ -212,29 +212,29 @@
       let subUL = document.querySelectorAll(".sub>ul");
       let gnb = document.querySelectorAll(".menu>li");
       console.log(subUL[0].offsetHeight);
-      function mysub(){
-        sub.forEach(function(v,k){
-          v.style.height =0+"px";
+      function mysub() {
+        sub.forEach(function (v, k) {
+          v.style.height = 0 + "px";
           v.classList.remove("on");
-        })
+        });
         document.querySelector(".head").style.height = 80 + "px";
       }
-      gnb.forEach(function (v, k,ar) {
-        v.onmouseenter = function () {
-         let ht = sub[k].querySelector("ul").offsetHeight;
-          console.log(ht);
-          document.querySelector(".head").style.height = ht + 80 + "px";
-          document.querySelector(".head").style.height = ht + 80 + "px";
-          };
-          v.onmouseleave = function () {
-            subinit();
-            gnb.forEach(function (v){
-              v.querySelector()
-          };
-            });
-            document.querySelector(".head").onmouseleave = function () {
-              subinit();
-            };
+      // gnb.forEach(function (v, k,ar) {
+      //   v.onmouseenter = function () {
+      //    let ht = sub[k].querySelector("ul").offsetHeight;
+      //     console.log(ht);
+      //     document.querySelector(".head").style.height = ht + 80 + "px";
+      //     document.querySelector(".head").style.height = ht + 80 + "px";
+      //     };
+      //     v.onmouseleave = function () {
+      //       subinit();
+      //       gnb.forEach(function (v){
+      //         v.querySelector()
+      //     };
+      //       });
+      //       document.querySelector(".head").onmouseleave = function () {
+      //         subinit();
+      //       };
     </script>
   </body>
 </html>
