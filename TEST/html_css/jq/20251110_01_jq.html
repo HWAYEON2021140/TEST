@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      // $(function () {});
+      // $("ul li a").css({ color: "red", textDecoration: "blue" });
+      // $("ul li a").click(function (e) {
+      //   e.preventDefault();
+      //   $(this).css({ color: "green", textDecoration: "none" });
+      // });
+      $(function () {
+        $("ul li a").mouseenter(function () {
+          $(this).css({ color: "green", textDecoration: "none" });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">하나</a></li>
+      <li><a href="#">둘</a></li>
+      <li><a href="#">셋</a></li>
+      <li><a href="#">넷나</a></li>
+      <li><a href="#">다섯나</a></li>
+      <li><a href="#">여섯나</a></li>
+    </ul>
+    <script>
+      let menu = document.querySelectorAll("ul li");
+      menu.forEach(function (v) {
+        v.querySelector("a").style.color = "red";
+        v.querySelector("a").style.textDecoration = "blue";
+      });
+    </script>
+  </body>
+</html>
