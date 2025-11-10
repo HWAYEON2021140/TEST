@@ -57,6 +57,11 @@
         animation: l-bubble 3s infinite;
       }
 
+      .l-bubble p img {
+        width: 100%;
+        justify-content: center;
+      }
+
       @keyframes l-bubble {
         0%,
         100% {
@@ -83,6 +88,27 @@
         50% {
           transform: translateY(-30px);
         }
+      }
+      .loading {
+        background-image: url(https://www.leeyoungji.co.kr/assets/images/bg02.jpg);
+        position: relative;
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .fall-yj img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+      }
+      .cloud img {
+        position: absolute;
+        justify-content: center;
+        bottom: 0;
+        left: 0;
       }
     </style>
   </head>
@@ -122,28 +148,26 @@
         </p>
       </div>
     </div>
-    <div class="lodding"></div>
+    <div class="loading">
+      <div class="fall-yj">
+        <p>
+          <img
+            src="https://www.leeyoungji.co.kr/assets/images/fall.gif"
+            alt="fall"
+          />
+        </p>
+      </div>
+      <div class="cloud">
+        <p>
+          <img
+            src="https://www.leeyoungji.co.kr/assets/images/cloud.png"
+            alt="cloud"
+          />
+        </p>
+      </div>
+    </div>
   </body>
 </html>
-
-<p>
-  <img
-    src="https://www.leeyoungji.co.kr/assets/images/needle.png"
-    alt="needle"
-  />
-</p>
-
-<p>
-  <img src="https://www.leeyoungji.co.kr/assets/images/fall.gif" alt="fall" />
-</p>
-
-<p>
-  <img src="https://www.leeyoungji.co.kr/assets/images/cloud.png" alt="cloud" />
-</p>
-
-<p>
-  <img src="https://www.leeyoungji.co.kr/assets/images/bg02.jpg" alt="bg2" />
-</p>
 
 https://www.leeyoungji.co.kr/assets/images/schedule.png
 https://www.leeyoungji.co.kr/assets/images/community.png
