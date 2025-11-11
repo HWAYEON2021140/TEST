@@ -1,0 +1,254 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  /* line-height: 50px; */
+  z-index: 1;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+header nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: -1px;
+}
+header nav ul li a {
+  color: #003cff;
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.f-page {
+  position: relative;
+  background-image: url(../img/all-4\ 1.jpg);
+  background-size: cover;
+  background-position: center;
+  /* overflow: hidden; */
+  /* position: absolute; */
+  width: 100%;
+  height: 100vh;
+  /* left: 0px;
+  top: 0px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .f-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+} */
+.f-page h1 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  color: #003cff;
+  font-size: 96px;
+  letter-spacing: -4px;
+  padding: 20px 0;
+}
+
+.news {
+  width: 100%;
+  padding: 0 40px 100px;
+  margin: 50px 0;
+  box-sizing: border-box;
+}
+.news h1 {
+  font-size: 40px;
+  letter-spacing: -2px;
+  color: #003cff;
+}
+.news .con {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.news .con ul:first-child {
+  /* flex: 1; */
+}
+
+.news .con .left li {
+  width: 765px;
+  line-height: 80px;
+  border-top: 1px solid #003cff8c;
+}
+.news .con .left li:last-child {
+  border-bottom: 1px solid #003cff8c;
+}
+
+.news .con .left .txt {
+  display: flex;
+  color: #003cff;
+}
+.news .con .left .desc {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.news .con .left .txt h5 {
+  font-size: 43px;
+  letter-spacing: -3px;
+}
+.news .con .left .txt span {
+  font-size: 20px;
+  margin-left: 15px;
+  letter-spacing: -1px;
+}
+
+.news .con .left li:hover .desc {
+  height: 80px;
+}
+.news .con .left .txt i {
+  right: 58%;
+  transform: rotate(-45deg);
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  color: #003cff;
+  font-size: 30px;
+}
+.news .con ul:last-child {
+  position: relative;
+  width: 385px;
+}
+.news .con ul:last-child li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+}
+.news .con ul:last-child p {
+  width: 100%;
+  margin: 0 0 0 auto;
+}
+.news .con img {
+  width: 100%;
+  object-fit: cover;
+}
+.about {
+  width: 100%;
+  padding: 100px 40px 100px;
+  margin: 50px 0;
+  box-sizing: border-box;
+}
+
+.ab-txt {
+  display: flex;
+  flex: 1;
+}
+.ab-txt span {
+  display: block;
+  font-size: 15px;
+  letter-spacing: -1px;
+  margin: 0 0 0 auto;
+  color: #f55401;
+}
+.ab-txt h4 {
+  font-size: 34px;
+  letter-spacing: -2px;
+  color: #ff5c0b;
+  text-align: right;
+}
+.about ul {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.about ul li {
+  width: 50%;
+  position: relative;
+}
+.new-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.new-item h4 {
+  font-size: 34px;
+  letter-spacing: -3px;
+  color: #f2f2f2;
+}
+.new-item ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+.new-item ul li {
+  gap: 30px;
+}
+.new-item ul li p:nth-child(1) {
+  width: 600px;
+  height: 600px;
+  gap: 30px;
+  padding: 60px 60px;
+  box-sizing: border-box;
+}
+.new-item ul li p:nth-child(1) img {
+  width: 100%;
+  object-fit: cover;
+}
+.new-item p {
+  font-size: 20px;
+  letter-spacing: -1.5px;
+  font-weight: bold;
+  color: #ff5c0b;
+}
+.more {
+  background-image: url(../img/orange.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.bau h4 {
+  font-size: 30px;
+  letter-spacing: -2px;
+  color: #ff5c0b;
+  padding: 40px;
+  box-sizing: border-box;
+  width: 77%;
+  text-align: left;
+}
+.bau p img {
+}

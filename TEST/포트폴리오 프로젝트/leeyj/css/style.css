@@ -1,0 +1,123 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  overflow-x: hidden;
+}
+.intro {
+  background: url(https://www.leeyoungji.co.kr/assets/images/bg01.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.in-bubble {
+  position: relative;
+}
+.in-bubble > p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+/* .in-bubble .n-hover img {
+  display: block;
+  position: absolute;
+  cursor: url(https://www.leeyoungji.co.kr/assets/images/needle.png), pointer;
+} */
+
+/* .in-bubble .n-hover:hover img {
+  display: none;
+} */
+
+.l-bubble p,
+.r-bubble p {
+  position: absolute;
+  width: 20vw;
+}
+
+.l-bubble p {
+  left: 30px;
+  bottom: 0;
+  animation: l-bubble 3s infinite;
+}
+
+.bu p img {
+  width: 100%;
+  justify-content: center;
+}
+
+@keyframes l-bubble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.r-bubble p {
+  right: 50px;
+  top: 50px;
+  animation: r-bubble 4s infinite;
+}
+
+@keyframes r-bubble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+}
+.loading {
+  background-image: url(https://www.leeyoungji.co.kr/assets/images/bg02.jpg);
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.fall-yj img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.cloud img {
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  animation: cloud 2.55s infinite;
+}
+@keyframes cloud {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="intro">
+      <div class="in-bubble">
+        <p class="n-hover">
+          <img
+            src="https://www.leeyoungji.co.kr/assets/images/bubble.gif"
+            alt="in-bubble"
+          />
+        </p>
+        <!-- <a href="#"> -->
+        <p class="t-hover">
+          <img
+            src="https://www.leeyoungji.co.kr/assets/images/b-hover.png"
+            alt="in-bubble-hover"
+          />
+        </p>
+        <!-- </a> -->
+      </div>
+      <div class="l-bubble bu">
+        <p>
+          <img
+            src="https://www.leeyoungji.co.kr/assets/images/b-left.png"
+            alt="l-bubble"
+          />
+        </p>
+      </div>
+      <div class="r-bubble bu">
+        <p>
+          <img
+            src="https://www.leeyoungji.co.kr/assets/images/b-right.png"
+            alt="r-bubble"
+          />
+        </p>
+      </div>
+    </div>
+    <div class="loading">
+      <div class="fall-yj">
+        <p>
+          <img
+            src="https://www.leeyoungji.co.kr/assets/images/fall.gif"
+            alt="fall"
+          />
+        </p>
+      </div>
+      <div class="cloud">
+        <p>
+          <img
+            src="https://www.leeyoungji.co.kr/assets/images/cloud.png"
+            alt="cloud"
+          />
+        </p>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".intro").style.display = "flex";
+      let bubble = document.querySelectorAll(".in-bubble > p");
+      bubble[0].style.display = "block";
+      document.querySelector(".in-bubble").onmouseenter = function () {
+        bubble[0].style.display = "none";
+        bubble[1].style.display = "block";
+      };
+      document.querySelector(".in-bubble").onmouseleave = function () {
+        bubble[0].style.display = "block";
+        bubble[1].style.display = "none";
+      };
+      document.querySelector(".intro").onclick = function () {
+        this.style.display = "none";
+        setTimeout(function () {
+          window.location.href = "./20251110_home.html";
+        }, 2000);
+      };
+    </script>
+  </body>
+</html>
