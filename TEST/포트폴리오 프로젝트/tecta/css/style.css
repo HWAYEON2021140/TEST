@@ -95,9 +95,6 @@ header nav ul li a {
   display: flex;
   justify-content: space-between;
 }
-.news .con ul:first-child {
-  /* flex: 1; */
-}
 
 .news .con .left li {
   width: 765px;
@@ -174,12 +171,12 @@ header nav ul li a {
   font-size: 15px;
   letter-spacing: -1px;
   margin: 0 0 0 auto;
-  color: #f55401;
+  color: #00a0ff;
 }
 .ab-txt h4 {
   font-size: 34px;
   letter-spacing: -2px;
-  color: #ff5c0b;
+  color: #00a0ff;
   text-align: right;
 }
 .about ul {
@@ -198,25 +195,30 @@ header nav ul li a {
   flex-direction: column;
   margin: 20px;
 }
+.new-item h3 {
+  font-size: 40px;
+  letter-spacing: -3px;
+  color: #f2f2f2;
+}
 .new-item h4 {
   font-size: 34px;
   letter-spacing: -3px;
-  color: #f2f2f2;
+  color: #00a0ff;
 }
 .new-item ul {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   margin-top: 50px;
+  justify-content: center;
 }
 .new-item ul li {
-  gap: 30px;
+  gap: 60px;
 }
 .new-item ul li p:nth-child(1) {
   width: 600px;
   height: 600px;
-  gap: 30px;
   padding: 60px 60px;
   box-sizing: border-box;
 }
@@ -228,7 +230,7 @@ header nav ul li a {
   font-size: 20px;
   letter-spacing: -1.5px;
   font-weight: bold;
-  color: #ff5c0b;
+  color: #00a0ff;
 }
 .more {
   background-image: url(../img/orange.jpg);
@@ -241,14 +243,57 @@ header nav ul li a {
   margin-top: 200px;
   margin-bottom: 200px;
 }
-.bau h4 {
+.bau_txt {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+.bau_txt span {
+  display: block;
+  font-size: 15px;
+  letter-spacing: -1px;
+  margin: 0 0 auto 0;
+  color: #00a0ff;
+}
+.bau_txt h4 {
   font-size: 30px;
   letter-spacing: -2px;
-  color: #ff5c0b;
-  padding: 40px;
+  color: #00a0ff;
   box-sizing: border-box;
   width: 77%;
+  margin: 0 0 auto 0;
   text-align: left;
 }
-.bau p img {
+
+.ani {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid #000;
+  overflow: hidden;
+  display: flex;
+}
+.ani ul li {
+  position: relative;
+}
+.ani ul li p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.best {
+  position: relative;
+  background-image: url(../img/item-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-top: 200px;
+  margin-bottom: 200px;
 }
