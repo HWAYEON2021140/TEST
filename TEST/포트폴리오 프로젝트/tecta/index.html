@@ -15,11 +15,9 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
-      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="//cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   </head>
   <body>
     <header>
@@ -47,7 +45,7 @@
             <div class="txt">
               <h5>2025. 10월 October</h5>
               <span> idd cologne </span>
-              <!-- <span>icon</span> -->
+              <i class="xi-long-arrow-right"></i>
             </div>
             <p class="desc">2025. 10월</p>
           </li>
@@ -55,7 +53,7 @@
             <div class="txt">
               <h5>2025. 10월 October</h5>
               <span> idd cologne </span>
-              <!-- <span>icon</span> -->
+              <i class="xi-long-arrow-right"></i>
             </div>
             <p class="desc">2025. 10월 October</p>
           </li>
@@ -63,7 +61,7 @@
             <div class="txt">
               <h5>2025. 10월 October</h5>
               <span> idd cologne </span>
-              <!-- <span>icon</span> -->
+              <i class="xi-long-arrow-right"></i>
             </div>
             <p class="desc">2025. 10월 October</p>
           </li>
@@ -71,8 +69,7 @@
             <div class="txt">
               <h5>2025. 10월 October</h5>
               <span> idd cologne </span>
-              <i class="fa-solid fa-arrow-right"></i>
-              <!-- <span>icon</span> -->
+              <i class="xi-long-arrow-right"></i>
             </div>
             <p class="desc">2025. 10월</p>
           </li>
@@ -80,8 +77,7 @@
             <div class="txt">
               <h5>2025. 10월 October</h5>
               <span> idd cologne </span>
-              <i class="fa-solid fa-arrow-right"></i>
-              <!-- <span>icon</span> -->
+              <i class="xi-long-arrow-right"></i>
             </div>
             <p class="desc">2025. 10월</p>
           </li>
@@ -266,11 +262,39 @@
       </ul>
     </div>
     <div class="best">
-      <ul class="best_item">
-        <li>
-          <p><img src="./img/best_item1.png" alt="" /></p>
-        </li>
-      </ul>
+      <h4>BEST</h4>
+      <div class="slide">
+        <div class="slider_img">
+          <ul class="slider_inner">
+            <li class="slider 01">
+              <p><img src="./img/best_item/1.jpg" /></p>
+            </li>
+            <li class="slider 02">
+              <p><img src="./img/best_item/2.jpg" /></p>
+            </li>
+            <li class="slider 03">
+              <p><img src="./img/best_item/3.jpg" /></p>
+            </li>
+            <li class="slider 04">
+              <p><img src="./img/best_item/4.jpg" /></p>
+            </li>
+            <li class="slider 05">
+              <p><img src="./img/best_item/5.jpg" /></p>
+            </li>
+            <li class="slider 06">
+              <p><img src="./img/best_item/6.jpg" /></p>
+            </li>
+            <li class="slider 07">
+              <p><img src="./img/best_item/7.jpg" /></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="actions">
+        <a href="#" class="prev"><i class="fa-regular fa-arrow-right"></i></a>
+        <a href="#" class="next">nxt</a>
+      </div>
+      <div class="slider_dot"></div>
     </div>
     <div class="article">
       <h5>What's?</h5>
@@ -380,6 +404,58 @@
           v.querySelector(".desc").style.height = "150px";
           rightImg[k].style.opacity = 1;
         };
+      });
+    </script>
+
+    <script>
+      const slide = document.querySelector(".slide");
+      const sliderImg = sliderWrap.querySelector(".slider_img"); //보여지는 영역
+      const sliderInner = sliderWrap.querySelector(".slider_inner"); //움직이는 영역
+      const slider = sliderWrap.querySelectorAll(".slider"); //개별 영역
+      const sliderDot = sliderWrap.querySelector(".slider_dot");
+      const sliderBtn = sliderWrap.querySelectorAll(".actions a");
+
+      let currentIndex = 0; //현재보이는 이미지
+      let sliderCount = slider.length; //이미지 갯수
+      let sliderWidth = slider[0].offsetWidth; //이미지 가로값
+      let sliderInterval = 1000; //이미지 변경 시간
+      let dotIndex = "";
+
+      function init() {
+        //이미지 갯수만큼 닷 메뉴 생성
+        slider.forEach(
+          () => (dotIndex += "<a href='#' class='dot'>이미지</a>")
+        );
+        sliderDot.innerHTML = dotIndex;
+
+        //첫번째 닷 메뉴에 활성화 표시
+        sliderDot.firstChild.classList.add("active");
+      }
+      init();
+      function gotoSlider(num) {
+        sliderInner.style.transition = "all 400ms";
+        sliderInner.style.transform =
+          "translateX(" + -sliderWidth * num + "px)";
+        currentIndex = num;
+
+        let dotActive = document.querySelectorAll(".slider__dot .dot");
+        dotActive.forEach((active) => active.classList.remove("active"));
+        dotActive[num].classList.add("active");
+
+        //이미지에 맞는 닷
+      }
+      //버튼을 클릭했을 때
+      sliderBtn.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          let prevIndex = (currentIndex + sliderCount - 1) % sliderCount;
+          let nextIndex = (currentIndex + 1) % sliderCount;
+
+          if (btn.classList.contains("prev")) {
+            gotoSlider(prevIndex);
+          } else {
+            gotoSlider(nextIndex);
+          }
+        });
       });
     </script>
   </body>
