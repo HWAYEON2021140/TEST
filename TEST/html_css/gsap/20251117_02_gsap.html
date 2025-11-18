@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .box {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+      }
+      .green {
+        background-color: green;
+      }
+      .purple {
+        background-color: purple;
+      }
+      .orange {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green"></div>
+    <div class="box purple"></div>
+    <div class="box orange"></div>
+    <button class="pause">pause</button>
+    <button class="resume">resume</button>
+    <button class="restart">restart</button>
+    <button class="seek">seek</button>
+    <button class="reverse">reverse</button>
+    <script>
+      let tl = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
+
+      tl.to(".green", { rotation: 360 });
+      tl.to(".purple", { rotation: 360 });
+      tl.to(".orange", { rotation: 360 });
+
+      document.querySelector(".pause").addEventListener("click", function () {
+        tl.pause();
+      });
+      document.querySelector(".resume").addEventListener("click", function () {
+        tl.resume();
+      });
+      document.querySelector(".restart").addEventListener("click", function () {
+        tl.restart();
+      });
+      document.querySelector(".seek").addEventListener("click", function () {
+        tl.seek(2);
+      });
+      document.querySelector(".reverse").addEventListener("click", function () {
+        tl.reverse();
+      });
+    </script>
+  </body>
+</html>

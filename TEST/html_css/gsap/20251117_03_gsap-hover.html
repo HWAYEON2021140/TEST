@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green"></div>
+
+    <!-- <script>
+      let ani = gsap.to(".box", {
+        scale: 0.5,
+        yoyo: true,
+        repeat: -1,
+        pause: true,
+      });
+      document.querySelector(".box").onmouseenter = function () {
+        ani.restart();
+      };
+      document.querySelector(".box").onmouseleave = function () {
+        ani.pause();
+      };
+    </script> 
+    상기는 gsap 버전-->
+    <script>
+      $(".green").hover(
+        function () {
+          ani.restart();
+        },
+        function () {
+          ani.pause();
+        }
+      );
+    </script>
+  </body>
+</html>
