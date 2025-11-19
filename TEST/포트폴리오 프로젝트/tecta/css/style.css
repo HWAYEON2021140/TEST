@@ -645,10 +645,10 @@ footer {
   align-items: center;
   gap: 120px;
 }
-.b-footer-left .add,
+/* .b-footer-left .add,
 .b-footer-left .top {
-  /* margin-right: 170px; */
-}
+  margin-right: 170px; 
+} */
 .top a {
   color: #003cff;
 }
