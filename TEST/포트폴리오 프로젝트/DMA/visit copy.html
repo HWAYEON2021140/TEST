@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전시 예약</title>
+    <link rel="stylesheet" href="css/vis.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/112747c9d417f4ef9ebddd908a1394b7?family=Media+Sans+Extended+Black"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css"
+    />
+    <script src="js/visit.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>  
+<body>
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전시 예약</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/vis.css" />
+
+    <!-- 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/112747c9d417f4ef9ebddd908a1394b7?family=Media+Sans+Extended+Black"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css"
+    />
+
+    <!-- JS -->
+    <script src="js/visit.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <!-- 1줄: 아이콘 / DMA / 시간·visit·언어 -->
+      <div class="top-bar">
+        <p class="menu-toggle">
+          <img src="./로고/txt_logo.png" alt="메뉴" />
+        </p>
+        <h1 class="main-logo">
+          <a href="/">
+            <img src="./로고/txt_logo.png" alt="대전시립미술관 로고" />
+          </a>
+        </h1>
+
+        <ul class="util">
+          <li class="time">금일개관 <span>10:00 - 18:00</span></li>
+          <li><a href="">[방문안내]</a></li>
+          <li class="lang">
+            <a href="#" class="on">KR</a>
+            <a href="#">EN</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 2줄: GNB + 오른쪽 Search -->
+      <nav class="gnb-bar">
+        <div class="gnb-inner">
+          <ul class="gnb">
+            <li class="has-sub">
+              <a href="">Art &amp; Science</a>
+              <ul class="sub-menu">
+                <li><a href="">소개</a></li>
+                <li><a href="">2026 대전과학예술비엔날레</a></li>
+                <li><a href="">과학예술비엔날레 특별전</a></li>
+                <li><a href="">지난 전시</a></li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a href="">Museum</a>
+              <ul class="sub-menu">
+                <li><a href="">운영소개</a></li>
+                <li><a href="">미술관 소개</a></li>
+                <li><a href="">전시</a></li>
+                <li><a href="">교육 &amp; 세미나</a></li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a href="">Foundation</a>
+              <ul class="sub-menu">
+                <li><a href="">미술관 소개</a></li>
+                <li><a href="">연혁 및 시설</a></li>
+                <li><a href="">조직 및 주요 업무</a></li>
+                <li><a href="">후원회</a></li>
+                <li><a href="">공지사항</a></li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a href="">Art Shop</a>
+              <ul class="sub-menu">
+                <li><a href="">아트샵</a></li>
+                <li><a href="">아트상품</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="search" action="" method="get">
+            <input id="site-search" type="text" placeholder="Search" />
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 사이드 메뉴 -->
+    <nav class="mega-menu" id="megaMenu" aria-hidden="true">
+      <div class="mega-panel">
+        <button type="button" class="mega-close">✕</button>
+
+        <ul class="link">
+          <li>
+            <a href="">Art & Science</a>
+            <ul class="sub">
+              <li><a href="">소개</a></li>
+              <li><a href="">2026 대전과학예술비엔날레 </a></li>
+              <li><a href="">과학예술비엔날레 특별전</a></li>
+              <li><a href="">지난 전시</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">Museum</a>
+            <ul class="sub">
+              <li>
+                전시
+                <ul class="sub">
+                  <li><a href="">현재 전시</a></li>
+                  <li><a href="">예정 전시</a></li>
+                  <li><a href="">지난 전시</a></li>
+                </ul>
+              </li>
+              <li>
+                교육 & 세미나
+                <ul class="sub">
+                  <li><a href="">어린이</a></li>
+                  <li><a href="">청소년</a></li>
+                  <li><a href="">교사</a></li>
+                  <li><a href="">성인</a></li>
+                  <li><a href="">교육 자료실</a></li>
+                </ul>
+              </li>
+              <li>
+                미술 연구
+                <ul class="sub">
+                  <li><a href="">도서</a></li>
+                  <li><a href="">연구</a></li>
+                  <li><a href="">열린 자료실</a></li>
+                  <li><a href="">DMA 리서치 랩</a></li>
+                </ul>
+              </li>
+              <li>
+                디지털 미술관
+                <ul class="sub">
+                  <li><a href="">현재 전시</a></li>
+                  <li><a href="">예정 전시</a></li>
+                  <li><a href="">지난 전시</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">Foundation</a>
+            <ul class="sub">
+              <li>
+                <a href="">미술관 소개</a>
+                <ul class="sub_info">
+                  <li><a href="">인사말</a></li>
+                  <li><a href="">MI 소개</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">연혁 및 시설</a>
+                <ul class="sub">
+                  <li><a href="">연혁</a></li>
+                  <li><a href="">시설 안내</a></li>
+                </ul>
+              </li>
+              <li><a href="">조직 및 주요 업무</a></li>
+              <li><a href="">후원회</a></li>
+              <li><a href="">공지사항</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">Art Shop</a>
+            <ul class="sub">
+              <li><a href="">아트샵</a></li>
+              <li><a href="">아트상품</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main">
+      <!-- 상단: 포스터 + 기본 정보 + 달력 -->
+      <section id="maintop">
+        <div class="wrap top-layout">
+          <div class="infor">
+            <img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"
+              alt="전시 포스터"
+            />
+            <div class="infor-title">
+              <span>[대전시립미술관 본관]</span>
+              <p>대충 작가와의 대화로 바라보는 전시 및 전위예술</p>
+
+              <div class="infor-txt">
+                <div class="infor-main">
+                  <p>전시기간</p>
+                  <p>관람시간</p>
+                  <p>관람료</p>
+                  <p>전시실</p>
+                </div>
+                <div class="infor-detail">
+                  <p>2025-08-24 - 2025-08-26</p>
+                  <p>
+                    화, 수, 목, 금, 토, 일 10:00-18:00<br />
+                  </p>
+                  <p>관람료 2,000원</p>
+                  <p>본관 3·4 전시실</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽 달력 영역 -->
+          <div class="date">
+            <h2>관람 예약</h2>
+            <div class="re_date_sellect">
+              <caption>
+                예약 날짜 선택
+              </caption>
+              <div class="color_guide">
+                <ul>
+                  <li><span class="color_ing"></span>관람 가능</li>
+                  <li><span class="color_select"></span>선택일</li>
+                </ul>
+              </div>
+            </div>
+
+            <section id="step-date" class="step">
+              <div class="date-scroll" id="calendarContainer"></div>
+            </section>
+          </div>
+          <!-- // .date -->
+        </div>
+      </section>
+
+      <!-- 예약 요약 -->
+      <aside id="summary" class="summary" aria-live="polite" hidden>
+        <div class="summary-box">
+          <h3>예약 요약</h3>
+          <dl>
+            <dt>전시</dt>
+            <dd id="s-exhibit">—</dd>
+            <dt>날짜</dt>
+            <dd id="s-date">—</dd>
+            <dt>시간</dt>
+            <dd id="s-slot">—</dd>
+            <dt>인원</dt>
+            <dd id="s-qty">—</dd>
+            <dt>금액</dt>
+            <dd id="s-price">—</dd>
+          </dl>
+        </div>
+      </aside>
+
+      <!-- 하단 3단계: 시간 / 인원 / 안내·결제 -->
+      <div class="top_step">
+        <!-- 시간 선택 -->
+        <section class="time-content">
+          <h2>시간 선택</h2>
+          <section id="step-time" class="step">
+            <div class="time-grid">
+              <div class="time-left">
+                <button class="time-btn" data-time="10:00">
+                  <p>10:00</p>
+                  <p>예약 가능</p>
+                </button>
+                <button class="time-btn" data-time="11:00">
+                  <p>11:00</p>
+                  <p>예약 가능</p>
+                </button>
+                <button class="time-btn" data-time="12:00">
+                  <p>12:00</p>
+                  <p>예약 가능</p>
+                </button>
+                <button class="time-btn" data-time="13:00">
+                  <p>13:00</p>
+                  <p>예약 가능</p>
+                </button>
+              </div>
+
+              <div class="time-right">
+                <button class="time-btn" data-time="14:00">
+                  <p>14:00</p>
+                  <p>예약 가능</p>
+                </button>
+                <button class="time-btn" data-time="15:00">
+                  <p>15:00</p>
+                  <p>예약 가능</p>
+                </button>
+                <button class="time-btn" data-time="16:00">
+                  <p>16:00</p>
+                  <p>예약 가능</p>
+                </button>
+                <button class="time-btn" data-time="17:00">
+                  <p>17:00</p>
+                  <p>예약 가능</p>
+                </button>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- 인원 선택 -->
+        <section id="step-pepple" class="step">
+          <div class="people_wrap">
+            <h2>인원 선택</h2>
+
+            <div class="choice_box">
+              <dl>
+                <dt>성인(만 25~64세)</dt>
+                <dd>
+                  <strong>15,000</strong> <span>원</span>
+                </dd>
+              </dl>
+              <div
+                class="people_qty"
+                data-type="adult"
+                data-qty="0"
+                data-price="15000"
+              >
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+
+            <div class="choice_box">
+              <dl>
+                <dt>청년(만 19-24세) 및 대학(원)생</dt>
+                <dd>
+                  <strong>9,000</strong> <span>원</span>
+                </dd>
+              </dl>
+              <div
+                class="people_qty"
+                data-type="teen"
+                data-qty="0"
+                data-price="9000"
+              >
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+
+            <div class="choice_box">
+              <dl>
+                <dt>청소년 <span>(만 7세 - 18세 이하)</span></dt>
+                <dd>
+                  <strong>6,000</strong> <span>원</span>
+                </dd>
+              </dl>
+              <div
+                class="people_qty"
+                data-type="youth"
+                data-qty="0"
+                data-price="6000"
+              >
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+
+            <div class="choice_box">
+              <dl>
+                <dt>시니어 <span>(만 65세 이상)</span></dt>
+                <dd><strong>무료</strong></dd>
+              </dl>
+              <div class="people_qty" data-type="senior" data-qty="0" data-price="0">
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+
+            <div class="choice_box">
+              <dl>
+                <dt>장애인, 국가유공자 (본인 및 동반 1인)</dt>
+                <dd><strong>무료</strong></dd>
+              </dl>
+              <div
+                class="people_qty"
+                data-type="disabled"
+                data-qty="0"
+                data-price="0"
+              >
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+
+            <div class="choice_box">
+              <dl>
+                <dt>대한민국 현역 군인,(해양)경찰,소방관(본인)</dt>
+                <dd><strong>무료</strong></dd>
+              </dl>
+              <div
+                class="people_qty"
+                data-type="military"
+                data-qty="0"
+                data-price="0"
+              >
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+
+            <div class="choice_box">
+              <dl>
+                <dt>문화누리카드 소지자</dt>
+                <dd><strong>무료</strong></dd>
+              </dl>
+              <div
+                class="people_qty"
+                data-type="culture"
+                data-qty="0"
+                data-price="0"
+              >
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+
+            <div class="choice_box">
+              <dl>
+                <dt>예술인패스 소지자</dt>
+                <dd><strong>무료</strong></dd>
+              </dl>
+              <div
+                class="people_qty"
+                data-type="artist"
+                data-qty="0"
+                data-price="0"
+              >
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+
+            <div class="choice_box">
+              <dl>
+                <dt>미취학 아동 (6세 이하)</dt>
+                <dd><strong>무료</strong></dd>
+              </dl>
+              <div class="people_qty" data-type="baby" data-qty="0" data-price="0">
+                <button
+                  type="button"
+                  class="qty-option is-selected"
+                  data-value="0"
+                >
+                  0
+                </button>
+                <button type="button" class="qty-option" data-value="1">1</button>
+                <button type="button" class="qty-option" data-value="2">2</button>
+                <button type="button" class="qty-option" data-value="3">3</button>
+                <button type="button" class="qty-option" data-value="4">4</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 안내 사항 + 결제 -->
+        <div class="under_step">
+          <section id="step4" class="step">
+            <h2>안내 사항</h2>
+            <div class="info_box">
+              <ul class="infor">
+                <li>
+                  예매 및 관람 안내
+                  <ul class="infor_sub">
+                    <li>
+                      타인에게 관람권을 양도 또는 판매하는 행위는 금지하고
+                      있으며, 예약자 본인이 아닌 경우 관람이 제한될 수 있습니다.
+                    </li>
+                    <li>
+                      매주 월요일 오후 6시에 일주일 단위로 오픈됩니다.<br />
+                      (예) '25년 3월 10일 오후 6시에
+                      '25.3.17(월)-'25.3.23(일)까지 오픈
+                    </li>
+                    <li>
+                      예매 가능 인원은 최대 4명입니다. (관람일 기준, 1개의 ID로
+                      전시별 4매까지 예매 가능)
+                    </li>
+                    <li>
+                      본인 외 무료 및 할인 대상자로 예매하셨을 경우 온라인 예매
+                      후 미술관 안내데스크에서 해당 증빙 확인 뒤 QR관람권이
+                      활성화 됩니다.
+                    </li>
+                    <li>
+                      주말, 공휴일에는 주차가 어려우니 대중교통을 이용하시기
+                      바랍니다.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  예약 취소 안내
+                  <ul class="infor_sub">
+                    <li>
+                      예약 취소 가능기간은 해당 회차 종료 10분전까지입니다.
+                    </li>
+                    <li>
+                      방문이 힘드신 경우 타인을 배려하기 위해 반드시 예약 취소
+                      부탁드립니다.
+                    </li>
+                    <li>
+                      예약 취소는 로그인후 '마이페이지 - 예약/신청 내역 - 전시'
+                      에서 가능합니다.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  입장 안내
+                  <ul class="infor_sub">
+                    <li>
+                      전시실 앞에 배치 되어있는 QR검표기에 QR관람권을 인식한 후
+                      입장 가능합니다.
+                    </li>
+                    <li>입장은 1회만 가능합니다.</li>
+                  </ul>
+                </li>
+                <li>
+                  환불정책
+                  <ul class="infor_sub">
+                    <li>이용회차 입장시간 10분 전까지 취소시 100% 환불</li>
+                    <li>이용회차 입장 마감시간 이후 취소/환불 불가</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="step5" class="step">
+            <h2>결제 및 안내</h2>
+            <div class="pay_box">
+              <div class="pay_summary">
+                <ul id="payList" class="pay_list"></ul>
+                <div class="pay_total">
+                  <span class="label">TOTAL</span>
+                  <span id="payTotal" class="price">0원</span>
+                </div>
+              </div>
+
+              <p class="notice">
+                결제 완료 후에는 전시 1일 전까지 취소/환불이 가능하며, 당일
+                취소는 환불이 제한될 수 있습니다. 자세한 환불 규정은 이용
+                약관을 참고해주세요.
+              </p>
+              <div class="pay_actions">
+                <button type="button" class="btn line not-pay">취소하기</button>
+                <button type="button" class="btn solid pay">결제하기</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- 메인 인터랙션 스크립트 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /* -----------------------------
+         * 공통 엘리먼트/상태
+         * --------------------------- */
+        const calendarContainer = document.getElementById("calendarContainer");
+        const summaryBox = document.getElementById("summary");
+        const sExhibit = document.getElementById("s-exhibit");
+        const sDate = document.getElementById("s-date");
+        const sSlot = document.getElementById("s-slot");
+        const sQty = document.getElementById("s-qty");
+        const sPrice = document.getElementById("s-price");
+        const payListEl = document.getElementById("payList");
+        const payTotalEl = document.getElementById("payTotal");
+
+        let selectedCell = null; // 현재 선택된 날짜 셀(td)
+        let selectedDateIso = null; // "2025-11-27" 이런 형식
+        let selectedTime = null; // "14:00" 같은 형식
+
+        /* -----------------------------
+         * 0. 전시 제목 자동으로 가져오기
+         * --------------------------- */
+        (function setExhibitTitle() {
+          const hall = document
+            .querySelector(".infor-title span")
+            ?.textContent.trim();
+          const title = document
+            .querySelector(".infor-title p")
+            ?.textContent.trim();
+
+          const finalTitle =
+            hall && title ? `${hall} ${title}` : title || hall || "—";
+
+          if (sExhibit) {
+            sExhibit.textContent = finalTitle;
+          }
+        })();
+
+        /* -----------------------------
+         * 1. 자동 달력 생성 (월요일 휴관, 5개월)
+         * --------------------------- */
+        const today = new Date();
+        const monthsToShow = 5; // 오늘 포함 5개월
+
+        for (let i = 0; i < monthsToShow; i++) {
+          const base = new Date(
+            today.getFullYear(),
+            today.getMonth() + i,
+            1
+          );
+          const monthBlock = buildMonth(base, today);
+          calendarContainer.appendChild(monthBlock);
+        }
+
+        function buildMonth(baseDate, today) {
+          const year = baseDate.getFullYear();
+          const month = baseDate.getMonth(); // 0~11
+          const titleText = `${year}.${String(month + 1).padStart(2, "0")}`;
+
+          const monthBlock = document.createElement("div");
+          monthBlock.className = "month-block";
+
+          monthBlock.innerHTML = `
+            <div class="wrap_date">
+              <div class="date_infor">
+                <strong class="date-text">${titleText}</strong>
+              </div>
+            </div>
+            <div class="wrap_calender">
+              <table class="table_calendar">
+                <colgroup>
+                  <col style="width:14%">
+                  <col style="width:14%">
+                  <col style="width:14%">
+                  <col style="width:14%">
+                  <col style="width:14%">
+                  <col style="width:14%">
+                  <col style="width:14%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">일</th>
+                    <th scope="col">월</th>
+                    <th scope="col">화</th>
+                    <th scope="col">수</th>
+                    <th scope="col">목</th>
+                    <th scope="col">금</th>
+                    <th scope="col">토</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          `;
+
+          const tbody = monthBlock.querySelector("tbody");
+          const firstDay = new Date(year, month, 1).getDay(); // 0=일요일
+          const lastDate = new Date(year, month + 1, 0).getDate(); // 말일
+          let tr = document.createElement("tr");
+
+          // 앞쪽 빈칸
+          for (let i = 0; i < firstDay; i++) {
+            tr.appendChild(document.createElement("td"));
+          }
+
+          const todayOnly = new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            today.getDate()
+          );
+
+          // 날짜 채우기
+          for (let date = 1; date <= lastDate; date++) {
+            if (tr.children.length === 7) {
+              tbody.appendChild(tr);
+              tr = document.createElement("tr");
+            }
+
+            const td = document.createElement("td");
+            const a = document.createElement("a");
+            const span = document.createElement("span");
+
+            const cellDate = new Date(year, month, date);
+            const iso = `${year}-${String(month + 1).padStart(
+              2,
+              "0"
+            )}-${String(date).padStart(2, "0")}`;
+            const dayOfWeek = cellDate.getDay(); // 0~6
+
+            a.href = "#none";
+            a.dataset.date = iso;
+            span.textContent = date;
+            a.appendChild(span);
+            td.appendChild(a);
+
+            const isPast = cellDate < todayOnly;
+            const isMonday = dayOfWeek === 1; // 월요일
+
+            if (isPast || isMonday) {
+              td.classList.add("pastDay");
+              if (isMonday && !isPast) td.classList.add("disabled-day");
+            } else {
+              td.classList.add("ca_ing"); // 선택 가능한 날짜
+            }
+
+            // 클릭 시 날짜 선택
+            td.addEventListener("click", function () {
+              if (!td.classList.contains("ca_ing")) return;
+
+              if (selectedCell) {
+                selectedCell.classList.remove("ca_select");
+              }
+              td.classList.add("ca_select");
+              selectedCell = td;
+              selectedDateIso = iso;
+
+              if (sDate) {
+                sDate.textContent = iso.replace(/-/g, "."); // 2025-11-27 → 2025.11.27
+              }
+              showSummary();
+              scrollToSummary();
+            });
+
+            tr.appendChild(td);
+          }
+
+          // 뒷쪽 빈칸
+          if (tr.children.length > 0) {
+            while (tr.children.length < 7) {
+              tr.appendChild(document.createElement("td"));
+            }
+            tbody.appendChild(tr);
+          }
+
+          return monthBlock;
+        }
+
+        // 오늘 날짜가 선택 가능한 날이면 자동 선택
+        const todayIso = `${today.getFullYear()}-${String(
+          today.getMonth() + 1
+        ).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+        const todayAnchor = document.querySelector(
+          `.table_calendar a[data-date="${todayIso}"]`
+        );
+        if (todayAnchor) {
+          const td = todayAnchor.parentElement;
+          if (td.classList.contains("ca_ing")) {
+            td.classList.add("ca_select");
+            selectedCell = td;
+            selectedDateIso = todayIso;
+            if (sDate) sDate.textContent = todayIso.replace(/-/g, ".");
+            showSummary();
+          }
+        }
+
+        function showSummary() {
+          if (!summaryBox) return;
+          if (summaryBox.hasAttribute("hidden")) {
+            summaryBox.removeAttribute("hidden");
+          }
+        }
+
+        function scrollToSummary() {
+          if (!summaryBox) return;
+          summaryBox.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        /* -----------------------------
+         * 2. 시간 선택
+         * --------------------------- */
+        document.querySelectorAll(".time-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            document
+              .querySelectorAll(".time-btn.is-selected")
+              .forEach((b) => b.classList.remove("is-selected"));
+
+            btn.classList.add("is-selected");
+            selectedTime = btn.dataset.time || btn.textContent.trim();
+
+            if (sSlot) {
+              sSlot.textContent = selectedTime;
+            }
+            showSummary();
+            scrollToSummary();
+          });
+        });
+
+        /* -----------------------------
+         * 3. 인원 선택 + 결제 요약 + 총 인원 제한(4명)
+         * --------------------------- */
+
+        const ticketTypes = {
+          adult: { label: "성인(만 25~64세)", price: 15000 },
+          teen: { label: "청년(만 19~24세)", price: 9000 },
+          youth: { label: "청소년(만 7~18세 이하)", price: 6000 },
+          senior: { label: "시니어(만 65세 이상)", price: 0 },
+          disabled: { label: "장애인, 국가유공자", price: 0 },
+          military: { label: "현역 군인/경찰/소방", price: 0 },
+          culture: { label: "문화누리카드 소지자", price: 0 },
+          artist: { label: "예술인패스 소지자", price: 0 },
+          baby: { label: "미취학 아동(6세 이하)", price: 0 },
+        };
+
+        const MAX_TOTAL = 4;
+
+        function updatePaySummary() {
+          if (!payListEl || !payTotalEl) return;
+
+          payListEl.innerHTML = "";
+          let totalPrice = 0;
+          let totalCount = 0;
+
+          document.querySelectorAll(".people_qty").forEach((box) => {
+            const type = box.dataset.type;
+            const qty = parseInt(box.dataset.qty || "0", 10);
+            const ticket = ticketTypes[type];
+
+            if (!ticket || qty <= 0) return;
+
+            const price = ticket.price * qty;
+            totalPrice += price;
+            totalCount += qty;
+
+            const li = document.createElement("li");
+            li.innerHTML = `
+              <span class="label">${ticket.label}</span>
+              <span class="qty">× ${qty}</span>
+              <span class="price">${price.toLocaleString()}원</span>
+            `;
+            payListEl.appendChild(li);
+          });
+
+          payTotalEl.textContent = totalPrice.toLocaleString() + "원";
+
+          if (sQty)
+            sQty.textContent = totalCount ? totalCount + "명" : "—";
+          if (sPrice)
+            sPrice.textContent = totalPrice
+              ? totalPrice.toLocaleString() + "원"
+              : "0원";
+        }
+
+        // 0~4 버튼 클릭 + 인원 제한 로직
+        document.querySelectorAll(".qty-option").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const wrap = btn.closest(".people_qty");
+            if (!wrap) return;
+
+            const newValue = parseInt(btn.dataset.value || "0", 10);
+
+            // 클릭 시 가상의 새로운 총합 계산
+            let tempTotal = 0;
+            document.querySelectorAll(".people_qty").forEach((box) => {
+              if (box === wrap) {
+                tempTotal += newValue;
+              } else {
+                tempTotal += parseInt(box.dataset.qty || "0", 10);
+              }
+            });
+
+            if (tempTotal > MAX_TOTAL) {
+              alert(`예약 인원은 최대 ${MAX_TOTAL}명까지 선택 가능합니다.`);
+              return;
+            }
+
+            wrap.dataset.qty = newValue;
+
+            wrap
+              .querySelectorAll(".qty-option")
+              .forEach((b) => b.classList.remove("is-selected"));
+            btn.classList.add("is-selected");
+
+            updatePaySummary();
+            showSummary();
+          });
+        });
+
+        // 페이지 첫 로드시 한 번 초기화
+        updatePaySummary();
+      });
+    </script>
+
+    <!-- 전체 메뉴 열고 닫기 -->
+    <script>
+      const megaMenu = document.getElementById("megaMenu");
+      const toggleBtn = document.querySelector(".menu-toggle");
+      const closeBtn = document.querySelector(".mega-close");
+
+      toggleBtn.addEventListener("click", () => {
+        megaMenu.classList.add("is-open");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        megaMenu.classList.remove("is-open");
+      });
+    </script>
+
+    <!-- 헤더의 '금일개관' 상태 자동 변경 -->
+    <script>
+      const timeEl = document.querySelector(".time");
+
+      const now = new Date();
+      const day = now.getDay(); // 0=일, 1=월, ...
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+
+      const openTime = 10;
+      const closeTime = 18;
+
+      function updateOpenStatus() {
+        if (day === 1) {
+          timeEl.innerHTML = `금일 <span>휴관</span>`;
+          return;
+        }
+
+        if (hour > closeTime || (hour === closeTime && minute >= 0)) {
+          timeEl.innerHTML = `금일 <span>운영 종료</span>`;
+          return;
+        }
+
+        if (hour < openTime) {
+          timeEl.innerHTML = `금일 <span>개관 전</span>`;
+          return;
+        }
+
+        timeEl.innerHTML = `금일개관 <span>10:00 - 18:00</span>`;
+      }
+
+      updateOpenStatus();
+    </script>
+  </body>
+</html>

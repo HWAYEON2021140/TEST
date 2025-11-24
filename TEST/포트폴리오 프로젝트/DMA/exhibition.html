@@ -1,18 +1,217 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/exhi.css" />
   </head>
   <body>
+
+
+ <header id="header">
+  <!-- 1줄: 아이콘 / DMA / 시간·visit·언어 -->
+  <div class="top-bar">
+    <p class="menu-toggle">
+      <img src="./로고/Group.png" alt="메뉴">
+    </p>
+    <h1 class="main-logo">
+        <img src="./로고/txt_logo.png" alt="">
+    </h1>
+
+    <ul class="util">
+      <li class="time">금일개관 <span>10:00 - 18:00</span></li>
+      <li><a href="">[방문안내]</a></li>
+      <li class="lang">
+        <a href="#" class="on">KR</a>
+        <a href="#">EN</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 2줄: GNB + 오른쪽 Search -->
+  <nav class="gnb-bar">
+    <div class="gnb-inner">
+      <ul class="gnb">
+        <li class="has-sub">
+          <a href="">Art &amp; Science</a>
+          <ul class="sub-menu">
+            <li><a href="">소개</a></li>
+            <li><a href="">2026 대전과학예술비엔날레</a></li>
+            <li><a href="">과학예술비엔날레 특별전</a></li>
+            <li><a href="">지난 전시</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="">Museum</a>
+          <ul class="sub-menu">
+            <li><a href="">운영소개</a></li>
+            <li><a href="">미술관 소개</a></li>
+            <li><a href="">전시</a></li>
+            <li><a href="">교육 &amp; 세미나</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="">Foundation</a>
+          <ul class="sub-menu">
+            <li><a href="">미술관 소개</a></li>
+            <li><a href="">연혁 및 시설</a></li>
+            <li><a href="">조직 및 주요 업무</a></li>
+            <li><a href="">후원회</a></li>
+            <li><a href="">공지사항</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="">Art Shop</a>
+          <ul class="sub-menu">
+            <li><a href="">아트샵</a></li>
+            <li><a href="">아트상품</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="search" action="" method="get">
+        <input id="site-search" type="text" placeholder="Search">
+      </form>
+    </div>
+  </nav>
+</header>
+<nav class="depth-nav depth-museum">
+  <ul>
+    <li class="has-sub is-active">
+      <a href="/museum/operation.html">전시</a>
+  <ul class="sub-sub">
+  <li class="is-active">
+    <a href="#" data-target="now">현재 전시</a>
+  </li>
+  <li>
+    <a href="#" data-target="past">지난 전시</a>
+  </li>
+</ul>
+
+    <li>
+      <a href="/museum/about.html">운영소개</a>
+    </li>
+
+    <li>
+      <a href="/museum/exhibition.html">교육 &amp; 세미나</a>
+    </li>
+
+    <li>
+      <a href="/museum/edu.html">미술 연구</a>
+    </li>
+
+    <li>
+      <a href="/museum/publish.html">디지털 미술관</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- 사이드 메뉴 -->
+<nav class="mega-menu" id="megaMenu" aria-hidden="true">
+  <div class="mega-panel">
+    <button type="button" class="mega-close">✕</button>
+
+    <ul class="link">
+      <li>
+        <a href="">Art & Science</a>
+        <ul class="sub">
+          <li><a href="">소개</a></li>
+          <li><a href="">2026 대전과학예술비엔날레 </a></li>
+          <li><a href="">과학예술비엔날레 특별전</a></li>
+          <li><a href="">지난 전시</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="">Museum</a>
+        <ul class="sub">
+          <li>
+            전시
+            <ul class="sub">
+              <li><a href="">현재 전시</a></li>
+              <li><a href="">예정 전시</a></li>
+              <li><a href="">지난 전시</a></li>
+            </ul>
+          </li>
+          <li>
+            교육 & 세미나
+            <ul class="sub">
+              <li><a href="">어린이</a></li>
+              <li><a href="">청소년</a></li>
+              <li><a href="">교사</a></li>
+              <li><a href="">성인</a></li>
+              <li><a href="">교육 자료실</a></li>
+            </ul>
+          </li>
+          <li>
+            미술 연구
+            <ul class="sub">
+              <li><a href="">도서</a></li>
+              <li><a href="">연구</a></li>
+              <li><a href="">열린 자료실</a></li>
+              <li><a href="">DMA 리서치 랩</a></li>
+            </ul>
+          </li>
+          <li>
+            디지털 미술관
+            <ul class="sub">
+              <li><a href="">현재 전시</a></li>
+              <li><a href="">예정 전시</a></li>
+              <li><a href="">지난 전시</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="">Foundation</a>
+        <ul class="sub">
+          <li>
+            <a href="">미술관 소개</a>
+            <ul class="sub_info">
+              <li><a href="">인사말</a></li>
+              <li><a href="">MI 소개</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">연혁 및 시설</a>
+            <ul class="sub">
+              <li><a href="">연혁</a></li>
+              <li><a href="">시설 안내</a></li>
+            </ul>
+          </li>
+          <li><a href="">조직 및 주요 업무</a></li>
+          <li><a href="">후원회</a></li>
+          <li><a href="">공지사항</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="">Art Shop</a>
+        <ul class="sub">
+          <li><a href="">아트샵</a></li>
+          <li><a href="">아트상품</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
     <main>
       <section class="now-exhibition">
         <h2>전시</h2>
         <ul class="now-exhi">
           <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+               <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
               <p>전시 설명</p>
@@ -23,7 +222,9 @@
           </li>
           <li>
             <a href="">
-              <p><img src="exhibition1.jpg" alt="Exhibition 1" /></p>
+                 <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
               <p>전시 설명</p>
@@ -34,7 +235,9 @@
           </li>
           <li>
             <a href="">
-              <p><img src="exhibition1.jpg" alt="Exhibition 1" /></p>
+               <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
               <p>전시 설명</p>
@@ -45,7 +248,9 @@
           </li>
           <li>
             <a href="">
-              <p><img src="exhibition1.jpg" alt="Exhibition 1" /></p>
+                <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
               <p>전시 설명</p>
@@ -56,7 +261,9 @@
           </li>
           <li>
             <a href="">
-              <p><img src="exhibition1.jpg" alt="Exhibition 1" /></p>
+           <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
               <p>전시 설명</p>
@@ -67,7 +274,9 @@
           </li>
           <li>
             <a href="">
-              <p><img src="exhibition1.jpg" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
               <p>전시 설명</p>
@@ -79,119 +288,189 @@
         </ul>
       </section>
 
+
       <section class="past-exhibition">
         <h2>지난 전시</h2>
         <ul class="past-exhi">
           <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                  <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
-          <li>
+                    <li>
             <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
+      <p><img
+              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
+            /></p>
               <p>전시 제목</p>
               <p>영문 전시 제목</p>
+              <p>전시 설명</p>
               <p>전시 장소</p>
               <p>전시 기간</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <p><img src="" alt="Exhibition 1" /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
+              <p>오디오 가이드</p>
             </a>
           </li>
         </ul>
       </section>
     </main>
+
+
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabLinks = document.querySelectorAll(".sub-sub a");
+    const nowSection  = document.querySelector(".now-exhibition");
+    const pastSection = document.querySelector(".past-exhibition");
+    const tabItems = document.querySelectorAll(".sub-sub li");
+
+    tabLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();  // 페이지 이동 막기
+
+        const target = this.dataset.target; // "now" 또는 "past"
+
+        // 탭 li 활성화 표시 변경
+        tabItems.forEach(li => li.classList.remove("is-active"));
+        this.parentElement.classList.add("is-active");
+
+        // 섹션 보이기/숨기기
+        if (target === "now") {
+          nowSection.classList.add("is-active");
+          pastSection.classList.remove("is-active");
+        } else if (target === "past") {
+          pastSection.classList.add("is-active");
+          nowSection.classList.remove("is-active");
+        }
+      });
+    });
+  });
+</script>
+
   </body>
 </html>

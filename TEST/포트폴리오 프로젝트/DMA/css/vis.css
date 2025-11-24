@@ -1,0 +1,289 @@
+@charset "utf-8";
+
+:root {
+  /* 기본 색 */
+  --bg: #f7f7f7;
+  --surface: #ffffff;
+  --fg: #111111;
+  --mut: #666666;
+
+  --bd: #e4e4e4;
+  --bd-soft: #f0f0f0;
+
+  --primary: #00834a;       /* DMA 녹색 톤 */
+  --primary-soft: #e1f3eb;
+
+  /* 라운드 & 그림자 */
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+  /* 폰트 사이즈 */
+  --fs-sm: 13px;
+  --fs-md: 15px;
+  --fs-lg: 18px;
+}
+body {
+  font-family: system-ui, Pretendard, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+.wrap.top-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 32px;
+}
+
+/* 왼쪽 포스터 영역 */
+.infor {
+  flex: 1.1;
+  position: sticky;
+  top: 96px;
+}
+.infor img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* 오른쪽 달력 영역 */
+#maintop .date {
+  flex: 1;
+  margin: 0;
+}
+.date > h2 {
+  margin-bottom: 16px;
+  font-size: var(--fs-lg);
+}
+
+.re_date_sellect {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.date-scroll {
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* 예약 전체 랩퍼 */
+.booking-wrap {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px 60px;
+}
+
+/* 2컬럼: 왼쪽 선택 / 오른쪽 요약 */
+.booking-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(320px, 1fr);
+  gap: 32px;
+  margin-top: 40px;
+}
+
+/* 왼쪽 컬럼 */
+.booking-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* 공통 step 카드 */
+.step {
+  padding: 24px 24px 28px;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--bd);
+  box-shadow: var(--shadow-soft);
+}
+.step h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+/* 오른쪽 요약 카드 */
+.summary {
+  position: sticky;
+  top: 96px;
+  align-self: flex-start;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--bd);
+  box-shadow: var(--shadow-soft);
+  padding: 20px 24px;
+}
+.summary h3 {
+  margin: 0 0 12px;
+  font-size: var(--fs-lg);
+}
+.summary dl {
+  margin: 0;
+  font-size: var(--fs-sm);
+}
+.summary dt {
+  float: left;
+  clear: left;
+  width: 60px;
+  color: var(--mut);
+}
+.summary dd {
+  margin: 0 0 6px 72px;
+}
+
+/* 반응형: 한 컬럼으로 */
+@media (max-width: 900px) {
+  .booking-layout {
+    grid-template-columns: 1fr;
+  }
+  .summary {
+    position: static;
+    order: -1;
+    margin-bottom: 16px;
+  }
+}
+
+.time-content {
+  padding: 0;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.time-left,
+.time-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.time-btn {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--bd);
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.time-btn p:last-child {
+  font-size: var(--fs-sm);
+  color: var(--mut);
+}
+.time-btn.is-selected {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+.people_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.choice_box {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--bd-soft);
+}
+
+.choice_box dl {
+  margin: 0;
+  flex: 1;
+}
+.choice_box dt {
+  font-size: var(--fs-md);
+  font-weight: 500;
+}
+.choice_box dt span {
+  font-size: var(--fs-sm);
+  color: var(--mut);
+}
+.choice_box dd {
+  margin: 4px 0 0;
+  font-size: var(--fs-md);
+}
+
+.people_qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.qty-option {
+  min-width: 40px;
+  height: 32px;
+  padding: 0 6px;
+  border-radius: 999px;
+  border: 1px solid var(--bd);
+  background: #fff;
+  font-size: var(--fs-sm);
+  cursor: pointer;
+}
+.qty-option.is-selected {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.info_box {
+  padding: 18px 20px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--bd);
+  font-size: var(--fs-sm);
+  color: var(--mut);
+  line-height: 1.7;
+}
+.infor li { margin-bottom: 8px; }
+.infor_sub { padding-left: 16px; }
+
+.pay_box {
+  padding: 18px 20px;
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--bd);
+}
+.pay_total {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #000;
+}
+.pay_actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+/* 버튼 공통 */
+.btn {
+  padding: 8px 18px;
+  font-size: var(--fs-sm);
+  border-radius: 999px;
+  border: 1px solid #111;
+  cursor: pointer;
+}
+.btn.line {
+  background: #fff;
+  color: #111;
+}
+.btn.solid {
+  background: #111;
+  color: #fff;
+}
