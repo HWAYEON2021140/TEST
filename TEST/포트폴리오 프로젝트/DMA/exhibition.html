@@ -585,35 +585,43 @@ Walk softly, because you're walking on my dreams</p>
     </footer>
 
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const tabLinks = document.querySelectorAll(".exhi_link a");
-        const nowSection = document.querySelector(".now-exhibition");
-        const pastSection = document.querySelector(".past-exhibition");
-        const tabItems = document.querySelectorAll(".exhi_link li");
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabLinks = document.querySelectorAll(".exhi_link a");
+    const nowSection = document.querySelector(".now-exhibition");
+    const pastSection = document.querySelector(".past-exhibition");
+    const tabItems = document.querySelectorAll(".exhi_link li");
 
-        tabLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault(); // 페이지 이동 막기
 
-            const target = this.dataset.target; // "now" 또는 "past"
+    nowSection.classList.add("is-active");
+    pastSection.classList.remove("is-active");
 
-            // 탭 li 활성화 표시 변경
-            tabItems.forEach((li) => li.classList.remove("is-active"));
-            this.parentElement.classList.add("is-active");
 
-            // 섹션 보이기/숨기기
-            if (target === "now") {
-              nowSection.classList.add("is-active");
-              pastSection.classList.remove("is-active");
-            } else if (target === "past") {
-              pastSection.classList.add("is-active");
-              nowSection.classList.remove("is-active");
-            }
-          });
-        });
+    tabItems.forEach((li) => li.classList.remove("is-active"));
+    document.querySelector('.exhi_link li:first-child').classList.add("is-active");
+
+
+    tabLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault(); 
+
+        const target = this.dataset.target; 
+
+
+        tabItems.forEach((li) => li.classList.remove("is-active"));
+        this.parentElement.classList.add("is-active");
+
+        if (target === "now") {
+          nowSection.classList.add("is-active");
+          pastSection.classList.remove("is-active");
+        } else if (target === "past") {
+          pastSection.classList.add("is-active");
+          nowSection.classList.remove("is-active");
+        }
       });
-    </script>
+    });
+  });
+</script>
   </body>
 </html>
 
