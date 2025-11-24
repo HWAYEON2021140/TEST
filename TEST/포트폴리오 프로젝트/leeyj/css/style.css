@@ -13,6 +13,7 @@ ul {
 }
 body {
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 .intro {
   background: url(https://www.leeyoungji.co.kr/assets/images/bg01.jpg);
@@ -36,15 +37,6 @@ body {
   transform: translate(-50%, -50%);
   display: none;
 }
-/* .in-bubble .n-hover img {
-  display: block;
-  position: absolute;
-  cursor: url(https://www.leeyoungji.co.kr/assets/images/needle.png), pointer;
-} */
-
-/* .in-bubble .n-hover:hover img {
-  display: none;
-} */
 
 .l-bubble p,
 .r-bubble p {
@@ -62,7 +54,9 @@ body {
   width: 100%;
   justify-content: center;
 }
-
+.cursor-needle {
+  cursor: url("https://www.leeyoungji.co.kr/assets/images/needle.png"), pointer;
+}
 @keyframes l-bubble {
   0%,
   100% {
@@ -113,11 +107,52 @@ body {
   left: 0;
   animation: cloud 2.55s infinite;
 }
+
 @keyframes cloud {
   0% {
     transform: translateY(100px);
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    height: 100vh;
+    background-image: url(https://www.leeyoungji.co.kr/assets/images/bg01-m.jpg)
+      no-repeat center / cover;
+  }
+
+  .in-bubble > p {
+    display: block;
+  }
+  .in-bubble .n-hover img {
+    width: 80vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  .in-bubble .t-hover img {
+    width: 80vw;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+  .l-bubble p,
+  .r-bubble p {
+    width: 40vw;
+  }
+  .l-bubble p {
+    left: 10px;
+  }
+  .r-bubble p {
+    right: 10px;
+  }
+
+  .loading {
+    height: 100vh;
+  }
+
+  .fall-yj img {
+    width: 70%;
   }
 }

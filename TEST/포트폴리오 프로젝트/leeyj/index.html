@@ -16,14 +16,13 @@
             alt="in-bubble"
           />
         </p>
-        <!-- <a href="#"> -->
+
         <p class="t-hover">
           <img
             src="https://www.leeyoungji.co.kr/assets/images/b-hover.png"
             alt="in-bubble-hover"
           />
         </p>
-        <!-- </a> -->
       </div>
       <div class="l-bubble bu">
         <p>
@@ -77,6 +76,19 @@
         setTimeout(function () {
           window.location.href = "./20251110_home.html";
         }, 2000);
+      };
+
+      const bubbleWrap = document.querySelector(".in-bubble");
+      bubbleWrap.onmouseenter = function () {
+        bubbleWrap.classList.add("cursor-needle");
+        bubble[0].style.display = "none";
+        bubble[1].style.display = "block";
+      };
+
+      bubbleWrap.onmouseleave = function () {
+        bubbleWrap.classList.remove("cursor-needle");
+        bubble[0].style.display = "block";
+        bubble[1].style.display = "none";
       };
     </script>
   </body>

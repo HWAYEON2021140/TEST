@@ -3,437 +3,543 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>exhibition</title>
     <link rel="stylesheet" href="./css/exhi.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/112747c9d417f4ef9ebddd908a1394b7?family=Media+Sans+Extended+Black"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css"
+    />
+    <script src="js/visit.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>  
   </head>
   <body>
+    <header id="header">
+      <!-- 1줄: 아이콘 / DMA / 시간·visit·언어 -->
+      <div class="top-bar">
+        <p class="menu-toggle">
+          <img src="./images/logo-b.png" alt="메뉴" />
+        </p>
+        <h1 class="main-logo">
+          <a href="/">
+            <img src="./images/txt_logo.png" alt="" />
+          </a>
+        </h1>
 
+        <ul class="util">
+          <li class="time">금일개관 <span>10:00 - 18:00</span></li>
+          <li><a href="">[방문안내]</a></li>
+          <li class="lang">
+            <a href="#" class="on">KR</a>
+            <a href="#">EN</a>
+          </li>
+        </ul>
+      </div>
 
- <header id="header">
-  <!-- 1줄: 아이콘 / DMA / 시간·visit·언어 -->
-  <div class="top-bar">
-    <p class="menu-toggle">
-      <img src="./로고/Group.png" alt="메뉴">
-    </p>
-    <h1 class="main-logo">
-        <img src="./로고/txt_logo.png" alt="">
-    </h1>
+      <!-- 2줄: GNB + 오른쪽 Search -->
+      <nav class="gnb-bar">
+        <div class="gnb-inner">
+          <ul class="gnb">
+            <li class="has-sub">
+              <a href="">Art &amp; Science</a>
+              <ul class="sub-menu">
+                <li><a href="">소개</a></li>
+                <li><a href="">2026 대전과학예술비엔날레</a></li>
+                <li><a href="">과학예술비엔날레 특별전</a></li>
+                <li><a href="">지난 전시</a></li>
+              </ul>
+            </li>
 
-    <ul class="util">
-      <li class="time">금일개관 <span>10:00 - 18:00</span></li>
-      <li><a href="">[방문안내]</a></li>
-      <li class="lang">
-        <a href="#" class="on">KR</a>
-        <a href="#">EN</a>
-      </li>
-    </ul>
-  </div>
+            <li class="has-sub">
+              <a href="">Museum</a>
+              <ul class="sub-menu">
+                <li><a href="">운영소개</a></li>
+                <li><a href="">미술관 소개</a></li>
+                <li><a href="">전시</a></li>
+                <li><a href="">교육 &amp; 세미나</a></li>
+              </ul>
+            </li>
 
-  <!-- 2줄: GNB + 오른쪽 Search -->
-  <nav class="gnb-bar">
-    <div class="gnb-inner">
-      <ul class="gnb">
-        <li class="has-sub">
-          <a href="">Art &amp; Science</a>
-          <ul class="sub-menu">
-            <li><a href="">소개</a></li>
-            <li><a href="">2026 대전과학예술비엔날레</a></li>
-            <li><a href="">과학예술비엔날레 특별전</a></li>
-            <li><a href="">지난 전시</a></li>
+            <li class="has-sub">
+              <a href="">Foundation</a>
+              <ul class="sub-menu">
+                <li><a href="">미술관 소개</a></li>
+                <li><a href="">연혁 및 시설</a></li>
+                <li><a href="">조직 및 주요 업무</a></li>
+                <li><a href="">후원회</a></li>
+                <li><a href="">공지사항</a></li>
+              </ul>
+            </li>
+
+            <li class="has-sub">
+              <a href="">Art Shop</a>
+              <ul class="sub-menu">
+                <li><a href="">아트샵</a></li>
+                <li><a href="">아트상품</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="search" action="" method="get">
+            <input id="site-search" type="text" placeholder="Search" />
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 사이드 메뉴 -->
+    <nav class="mega-menu" id="megaMenu" aria-hidden="true">
+      <div class="mega-panel">
+        <button type="button" class="mega-close">
+          <img src="./images/logo-w.png" alt="" />
+        </button>
+
+        <ul class="link">
+          <li>
+            <a href="">Art & Science</a>
+            <ul class="sub">
+              <li><a href="">소개</a></li>
+              <li><a href="">2026 대전과학예술비엔날레 </a></li>
+              <li><a href="">과학예술비엔날레 특별전</a></li>
+              <li><a href="">지난 전시</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="">Museum</a>
+            <ul class="sub">
+              <li>
+                전시
+                <ul class="sub">
+                  <li><a href="">현재 전시</a></li>
+                  <li><a href="">예정 전시</a></li>
+                  <li><a href="">지난 전시</a></li>
+                </ul>
+              </li>
+              <li>
+                교육 & 세미나
+                <ul class="sub">
+                  <li><a href="">어린이</a></li>
+                  <li><a href="">청소년</a></li>
+                  <li><a href="">교사</a></li>
+                  <li><a href="">성인</a></li>
+                  <li><a href="">교육 자료실</a></li>
+                </ul>
+              </li>
+              <li>
+                미술 연구
+                <ul class="sub">
+                  <li><a href="">도서</a></li>
+                  <li><a href="">연구</a></li>
+                  <li><a href="">열린 자료실</a></li>
+                  <li><a href="">DMA 리서치 랩</a></li>
+                </ul>
+              </li>
+              <li>
+              디지털 미술관
+              <ul class="sub">
+                <li><a href="">전시 해설</a></li>
+                <li><a href="">오디오 가이드</a></li>
+                <li><a href="">소장품</a></li>
+                <li><a href="">미술은행</a></li>
+            </ul>
+          </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">Foundation</a>
+            <ul class="sub">
+              <li>
+                <a href="">미술관 소개</a>
+                <ul class="sub_info">
+                  <li><a href="">인사말</a></li>
+                  <li><a href="">MI 소개</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">연혁 및 시설</a>
+                <ul class="sub">
+                  <li><a href="">연혁</a></li>
+                  <li><a href="">시설 안내</a></li>
+                </ul>
+              </li>
+              <li><a href="">조직 및 주요 업무</a></li>
+              <li><a href="">후원회</a></li>
+              <li><a href="">공지사항</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">Art Shop</a>
+            <ul class="sub">
+              <li><a href="">아트샵</a></li>
+              <li><a href="">아트상품</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav class="depth-nav depth-museum">
+      <ul>
+        <li class="has-sub is-active">
+          <a href="/museum/operation.html">전시</a>
+          <ul class="exhi_link">
+            <li class="is-active">
+              <a href="#" data-target="now">현재 전시</a>
+            </li>
+            <li>
+              <a href="#" data-target="past">지난 전시</a>
+            </li>
           </ul>
         </li>
-
-        <li class="has-sub">
-          <a href="">Museum</a>
-          <ul class="sub-menu">
-            <li><a href="">운영소개</a></li>
-            <li><a href="">미술관 소개</a></li>
-            <li><a href="">전시</a></li>
-            <li><a href="">교육 &amp; 세미나</a></li>
-          </ul>
+        <li>
+          <a href="/museum/about.html">운영소개</a>
         </li>
 
-        <li class="has-sub">
-          <a href="">Foundation</a>
-          <ul class="sub-menu">
-            <li><a href="">미술관 소개</a></li>
-            <li><a href="">연혁 및 시설</a></li>
-            <li><a href="">조직 및 주요 업무</a></li>
-            <li><a href="">후원회</a></li>
-            <li><a href="">공지사항</a></li>
-          </ul>
+        <li>
+          <a href="/museum/exhibition.html">교육 &amp; 세미나</a>
         </li>
 
-        <li class="has-sub">
-          <a href="">Art Shop</a>
-          <ul class="sub-menu">
-            <li><a href="">아트샵</a></li>
-            <li><a href="">아트상품</a></li>
-          </ul>
+        <li>
+          <a href="/museum/edu.html">미술 연구</a>
+        </li>
+
+        <li>
+          <a href="/museum/publish.html">디지털 미술관</a>
         </li>
       </ul>
-
-      <form class="search" action="" method="get">
-        <input id="site-search" type="text" placeholder="Search">
-      </form>
-    </div>
-  </nav>
-</header>
-<nav class="depth-nav depth-museum">
-  <ul>
-    <li class="has-sub is-active">
-      <a href="/museum/operation.html">전시</a>
-  <ul class="sub-sub">
-  <li class="is-active">
-    <a href="#" data-target="now">현재 전시</a>
-  </li>
-  <li>
-    <a href="#" data-target="past">지난 전시</a>
-  </li>
-</ul>
-
-    <li>
-      <a href="/museum/about.html">운영소개</a>
-    </li>
-
-    <li>
-      <a href="/museum/exhibition.html">교육 &amp; 세미나</a>
-    </li>
-
-    <li>
-      <a href="/museum/edu.html">미술 연구</a>
-    </li>
-
-    <li>
-      <a href="/museum/publish.html">디지털 미술관</a>
-    </li>
-  </ul>
-</nav>
-
-<!-- 사이드 메뉴 -->
-<nav class="mega-menu" id="megaMenu" aria-hidden="true">
-  <div class="mega-panel">
-    <button type="button" class="mega-close">✕</button>
-
-    <ul class="link">
-      <li>
-        <a href="">Art & Science</a>
-        <ul class="sub">
-          <li><a href="">소개</a></li>
-          <li><a href="">2026 대전과학예술비엔날레 </a></li>
-          <li><a href="">과학예술비엔날레 특별전</a></li>
-          <li><a href="">지난 전시</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="">Museum</a>
-        <ul class="sub">
-          <li>
-            전시
-            <ul class="sub">
-              <li><a href="">현재 전시</a></li>
-              <li><a href="">예정 전시</a></li>
-              <li><a href="">지난 전시</a></li>
-            </ul>
-          </li>
-          <li>
-            교육 & 세미나
-            <ul class="sub">
-              <li><a href="">어린이</a></li>
-              <li><a href="">청소년</a></li>
-              <li><a href="">교사</a></li>
-              <li><a href="">성인</a></li>
-              <li><a href="">교육 자료실</a></li>
-            </ul>
-          </li>
-          <li>
-            미술 연구
-            <ul class="sub">
-              <li><a href="">도서</a></li>
-              <li><a href="">연구</a></li>
-              <li><a href="">열린 자료실</a></li>
-              <li><a href="">DMA 리서치 랩</a></li>
-            </ul>
-          </li>
-          <li>
-            디지털 미술관
-            <ul class="sub">
-              <li><a href="">현재 전시</a></li>
-              <li><a href="">예정 전시</a></li>
-              <li><a href="">지난 전시</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="">Foundation</a>
-        <ul class="sub">
-          <li>
-            <a href="">미술관 소개</a>
-            <ul class="sub_info">
-              <li><a href="">인사말</a></li>
-              <li><a href="">MI 소개</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="">연혁 및 시설</a>
-            <ul class="sub">
-              <li><a href="">연혁</a></li>
-              <li><a href="">시설 안내</a></li>
-            </ul>
-          </li>
-          <li><a href="">조직 및 주요 업무</a></li>
-          <li><a href="">후원회</a></li>
-          <li><a href="">공지사항</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="">Art Shop</a>
-        <ul class="sub">
-          <li><a href="">아트샵</a></li>
-          <li><a href="">아트상품</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</nav>
-
+    </nav>
 
 
     <main>
       <section class="now-exhibition">
-        <h2>전시</h2>
         <ul class="now-exhi">
           <li>
             <a href="">
-               <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p class="thumb">
+                  <img
+              src="https://www.daejeon.go.kr/FileUpload/DMA/202503/20250310053726628.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="exbi-txt">
+                <p>DMA 소장품 하이라이트 2025: 흔적</p>
+                <p>DMA Collection Highlights 2025: Traces</p>
+                <p>열린수장고</p>
+                <p>2025. 04. 01. - 2025. 12. 21.</p>
+               </div>
+              <div class="category">
+                  <span>특별수장고</span>
+                  <span>평면화</span>
+                  <span>소장품</span>
+                </div>
+                <div class="audio">
+                  <p>오디오 가이드</p> <i class="xi-headset"></i>
+                </div>
             </a>
           </li>
           <li>
             <a href="">
-                 <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p class="thumb"> 
+                 <img
+              src="https://www.daejeon.go.kr/FileUpload/DMA/202508/20250820023701678.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="exbi-txt">
+                <p>열린수장고 기획전: 아피찻퐁 위라세타쿤</p>
+                <p>Special Exhibition open storage: Apichatpong Weirasetakun</p>
+                <p>열린수장고</p>
+                <p>2025-09-02 ~ 2025-12-21</p>
+              </div>
+              <div class="category">
+                  <span>열린수장고</span>
+                  <span>뉴미디어</span>
+                  <span>동시대</span>
+                </div>
+                <div class="audio">
+                  <p>오디오 가이드</p> <i class="xi-headset"></i>
+                </div>
             </a>
           </li>
           <li>
             <a href="">
-               <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p class="thumb">
+                  <img
+              src="https://cdn.sjsori.com/news/photo/202305/63827_77957_1636.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="exbi-txt">
+                <p>DMA 소장품 하이라이트 2025: 흔적</p>
+                <p>DMA Collection Highlights 2025: Traces</p>
+                <p>열린수장고</p>
+                <p>2025. 04. 01. - 2025. 12. 21.</p>
+               </div>
+              <div class="category">
+                  <span>특별수장고</span>
+                  <span>평면화</span>
+                  <span>소장품</span>
+                </div>
+                <div class="audio">
+                  <p>오디오 가이드</p> <i class="xi-headset"></i>
+                </div>
             </a>
           </li>
           <li>
             <a href="">
-                <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p class="thumb">
+                  <img
+              src="https://cdn.netongs.com/news/photo/202111/304884_97141_1820.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="exbi-txt">
+                <p>DMA 소장품 하이라이트 2025: 흔적</p>
+                <p>DMA Collection Highlights 2025: Traces</p>
+                <p>열린수장고</p>
+                <p>2025. 04. 01. - 2025. 12. 21.</p>
+               </div>
+              <div class="category">
+                  <span>특별수장고</span>
+                  <span>평면화</span>
+                  <span>소장품</span>
+                </div>
+                <div class="audio">
+                  <p>오디오 가이드</p> <i class="xi-headset"></i>
+                </div>
             </a>
           </li>
           <li>
             <a href="">
-           <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p class="thumb">
+                <img
+              src="https://cdn.netongs.com/news/photo/202111/304884_97141_1820.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="exbi-txt">
+                <p>DMA 소장품 하이라이트 2025: 흔적</p>
+                <p>DMA Collection Highlights 2025: Traces</p>
+                <p>열린수장고</p>
+                <p>2025. 04. 01. - 2025. 12. 21.</p>
+               </div>
+              <div class="category">
+                  <span>특별수장고</span>
+                  <span>평면화</span>
+                  <span>소장품</span>
+                </div>
+                <div class="audio">
+                  <p>오디오 가이드</p> <i class="xi-headset"></i>
+                </div>
             </a>
           </li>
           <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p class="thumb">
+                  <img
+              src="https://cdn.artkoreatv.com/news/photo/202506/97908_304323_1436.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="exbi-txt">
+                <p>DMA 소장품 하이라이트 2025: 흔적</p>
+                <p>DMA Collection Highlights 2025: Traces</p>
+                <p>열린수장고</p>
+                <p>2025. 04. 01. - 2025. 12. 21.</p>
+               </div>
+              <div class="category">
+                  <span>특별수장고</span>
+                  <span>평면화</span>
+                  <span>소장품</span>
+                </div>
+                <div class="audio">
+                  <p>오디오 가이드</p> <i class="xi-headset"></i>
+                </div>
             </a>
           </li>
         </ul>
       </section>
 
-
       <section class="past-exhibition">
-        <h2>지난 전시</h2>
         <ul class="past-exhi">
           <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+                <p>
+                   <img
+                src="https://daejeon.go.kr/FileUpload/DMA/202509/20250902052306480.jpg"alt="전시 포스터"
+                            />
+                </p>
+              <div class="past-exbi-txt">
+                <p>부드럽게 걸어요, 그대 내 꿈 위를 걷고 있기에</p>
+                <p>an exhibition of contemporary art:
+Walk softly, because you're walking on my dreams</p>
+                <p>2025. 09. 17 - 2025. 11. 23.</p>
+              </div>
             </a>
           </li>
-                  <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                 <img
+              src="https://daejeon.go.kr/FileUpload/DMA/202508/20250821061850855.jpg" alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>넥스트코드 2025: 사건의 무대</p>
+                <p>Next Code 2025: The Stage of Events</p>
+                <p>2025-09-17 ~ 2025-11-23</p>
+              </div>
             </a>
           </li>
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                 <img
+              src="https://daejeon.go.kr/FileUpload/DMA/202508/20250813012848742.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>제22회 이동훈미술상 본상수상작가전 최예태</p>
+                <p>Choi Ye-tae, the winner of the 22nd Lee Dong-hoon Art Award</p>
+                <p>2025-09-17 ~ 2025-11-23</p>
+              </div>
             </a>
           </li>
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                  <img
+              src="https://daejeon.go.kr/FileUpload/DMA/202508/20250811022056001.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>전시 제목</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
+              </div>
             </a>
           </li>
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                   <img
+              src="https://daejeon.go.kr/FileUpload/DMA/202506/20250625062640722.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>전시 제목</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
+              </div>
             </a>
           </li>
 
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                  <img
+              src="https://daejeon.go.kr/FileUpload/DMA/202505/20250521021328656.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>전시 제목</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
+              </div>
             </a>
           </li>
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                 <img
+              src="https://cdn.artkoreatv.com/news/photo/202506/97908_304323_1436.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>전시 제목</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
+              </div>
             </a>
           </li>
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                <img
+              src="https://cdn.artkoreatv.com/news/photo/202506/97908_304323_1436.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>전시 제목</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
+              </div>
             </a>
           </li>
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
+              <p>
+                  <img
+              src="https://cdn.artkoreatv.com/news/photo/202506/97908_304323_1436.jpg"alt="전시 포스터"
+            />
+              </p>
               <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
             </a>
           </li>
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                   <img
+              src="https://cdn.artkoreatv.com/news/photo/202506/97908_304323_1436.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>전시 제목</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
+              </div>
             </a>
           </li>
-                    <li>
+          <li>
             <a href="">
-      <p><img
-              src="https://www.noblesse.com/shop/data/m/editor_new/2020/09/09/3cbef4f7922ef6b305.jpg"alt="전시 포스터"
-            /></p>
-              <p>전시 제목</p>
-              <p>영문 전시 제목</p>
-              <p>전시 설명</p>
-              <p>전시 장소</p>
-              <p>전시 기간</p>
-              <p>오디오 가이드</p>
+              <p>
+                  <img
+              src="https://cdn.artkoreatv.com/news/photo/202506/97908_304323_1436.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>전시 제목</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p>
+                  <img
+              src="https://cdn.artkoreatv.com/news/photo/202506/97908_304323_1436.jpg"alt="전시 포스터"
+            />
+              </p>
+              <div class="past-exbi-txt">
+                <p>전시 제목</p>
+                <p>영문 전시 제목</p>
+                <p>전시 기간</p>
+              </div>
             </a>
           </li>
         </ul>
@@ -442,35 +548,73 @@
 
 
 
+<footer>
+    <div class="newsletter-bar">
+      <div class="footer-inner">
+      <div class="news-letter">
+        <h4>NEWS LETTER</h4>
+        <input type="text" placeholder="E-mail" />
+        <div class="input-box">
+          <button>Subscribe</button>
+          <i class="xi-arrow-right"></i>
+        </div>
+      </div>
+      </div>
+    </div>
+      <div class="footer-info">
+       <div class="footer-inner-under">
+        <div class="info-left">
+          <p><img src="./images/txt_logo.png" alt="dma 로고"></p>
+          <p>© Daejeon Museum of Art. All rights reserved.</p>
+        </div>
+        <div class="info-right">
+          <div class="add">
+            <p>A. 대전광역시 서구 둔산대로 155번길 22(둔산동)</p>
+            <p>T. 042-602-3200</p>
+            <p>F. 042-602-3219</p>
+          </div>
+          <div class="social-media">
+            <a href=""><img src="./images/icon-facebook.png" alt="페이스북 아이콘" /></a>
+            <a href=""><img src="./images/icon-insta.png" alt="인스타그램 아이콘" /></a>
+            <a href=""><img src="./images/icon-youtube.png" alt="유튜브 아이콘" /></a>
+            <a href=""><img src="./images/icon-city.png" alt="대전광역시 로고" /></a>
+            <a href=""><img src="./images/icon-k-cul.png" alt="문체부 로고" /></a>
+          </div>
+          </div>
+        </div>
+    </footer>
+
+
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabLinks = document.querySelectorAll(".sub-sub a");
-    const nowSection  = document.querySelector(".now-exhibition");
-    const pastSection = document.querySelector(".past-exhibition");
-    const tabItems = document.querySelectorAll(".sub-sub li");
+      document.addEventListener("DOMContentLoaded", function () {
+        const tabLinks = document.querySelectorAll(".exhi_link a");
+        const nowSection = document.querySelector(".now-exhibition");
+        const pastSection = document.querySelector(".past-exhibition");
+        const tabItems = document.querySelectorAll(".exhi_link li");
 
-    tabLinks.forEach((link) => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();  // 페이지 이동 막기
+        tabLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault(); // 페이지 이동 막기
 
-        const target = this.dataset.target; // "now" 또는 "past"
+            const target = this.dataset.target; // "now" 또는 "past"
 
-        // 탭 li 활성화 표시 변경
-        tabItems.forEach(li => li.classList.remove("is-active"));
-        this.parentElement.classList.add("is-active");
+            // 탭 li 활성화 표시 변경
+            tabItems.forEach((li) => li.classList.remove("is-active"));
+            this.parentElement.classList.add("is-active");
 
-        // 섹션 보이기/숨기기
-        if (target === "now") {
-          nowSection.classList.add("is-active");
-          pastSection.classList.remove("is-active");
-        } else if (target === "past") {
-          pastSection.classList.add("is-active");
-          nowSection.classList.remove("is-active");
-        }
+            // 섹션 보이기/숨기기
+            if (target === "now") {
+              nowSection.classList.add("is-active");
+              pastSection.classList.remove("is-active");
+            } else if (target === "past") {
+              pastSection.classList.add("is-active");
+              nowSection.classList.remove("is-active");
+            }
+          });
+        });
       });
-    });
-  });
-</script>
-
+    </script>
   </body>
 </html>
+
+
