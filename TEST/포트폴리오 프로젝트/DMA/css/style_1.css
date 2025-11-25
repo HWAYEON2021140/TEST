@@ -213,6 +213,108 @@ main {
   width: 100%;
 }
 
+.dma-visual {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.visual {
+  display: flex;
+  padding-right: 10px;
+  border-right: #111 1px solid;
+  border-left: #111 1px solid;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+  align-items: center;
+}
+.d-wrap {
+  padding-left: 10px;
+
+  border-right: #111 1px solid;
+}
+.d {
+  position: relative;
+  width: 541px;
+  height: 821px;
+}
+.m-wrap {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: #111 1px solid;
+}
+.m {
+  position: relative;
+  width: 857px;
+  height: 820px;
+}
+.a-wrap {
+  border-right: #111 1px solid;
+  padding-left: 10px;
+}
+
+.a {
+  position: relative;
+  width: 419px;
+  height: 819px;
+}
+
+.d p {
+  clip-path: url(#path1);
+  width: 100%;
+  height: 100%;
+}
+.m p {
+  clip-path: url(#path2);
+  width: 100%;
+  height: 100%;
+}
+.a p {
+  clip-path: url(#path3);
+  width: 100%;
+  height: 100%;
+}
+
+.d p img,
+.m p img,
+.a p img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #212121;
+}
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.border {
+  fill: none;
+  stroke: #212121;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
 footer {
   font-family: Pretendard, sans-serif;
   border-top: 1px solid #212121;
