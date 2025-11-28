@@ -414,6 +414,22 @@ a {
 }
 .audio {
   display: flex;
+  font-size: 14px;
+  margin: 0 auto;
+  width: 90%;
+  justify-content: flex-start;
+  align-items: last baseline;
+}
+.go-visit p {
+  margin: 0;
+  color: #212121;
+  letter-spacing: -1px;
+  padding: 4px;
+  border: 1px solid #212121;
+  border-radius: 40px;
+}
+.audio-box {
+  display: flex;
   gap: 10px;
   font-size: 14px;
   margin: 0 auto;
@@ -421,12 +437,12 @@ a {
   justify-content: flex-start;
   align-items: last baseline;
 }
-.audio p {
+.audio-box p {
   margin: 0;
   color: #212121;
   letter-spacing: -1px;
 }
-.audio .xi-headset {
+.audio-box .xi-headset {
   font-size: 20px;
 }
 .past-exhi {

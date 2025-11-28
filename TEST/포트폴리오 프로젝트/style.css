@@ -1,0 +1,37 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#header {
+  font-family: "Raleway", sans-serif;
+  border-bottom: 1px solid #212121;
+}
+
+.top-bar {
+  height: 60px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar .logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.top-bar .logo span {
+  color: #ff0000;
+}
