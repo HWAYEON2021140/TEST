@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/112747c9d417f4ef9ebddd908a1394b7?family=Media+Sans+Extended+Black"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/xpressengine/xeicon@2.3.1/xeicon.min.css"
+    />
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <title>Document</title>
   </head>
   <body>
     <header>
       <nav>
-        <div class="logo-head">
+        <div class="nav-inner">
           <div class="logo">
-            <a href=""><img src="" alt="" /></a>
+            <p><img src="./images/원형 비눗방울.png" alt="" /></p>
           </div>
           <div class="link-head">
             <ul>
@@ -22,107 +40,146 @@
           </div>
         </div>
       </nav>
-      <div class="logo-cintain">
-        <div class="move-logo">
-          <p><img src="" alt="" /></p>
-          <p><img src="" alt="" /></p>
+      <nav class="mobile">
+        <div class="m-inner">
+          <div class="m-logo">
+            <p><img src="./images/원형 비눗방울.png" alt="" /></p>
+          </div>
+          <div class="m-menu">
+            <p>Menu</p>
+          </div>
+        </div>
+        <div class="m-click">
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Work</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="icon-contain">
+        <div class="name-icon">
+          <a href=""><img src="./images/glass.png" alt="" /></a>
+        </div>
+        <div class="intro-txt">
+          <h1>
+            시각과 경험을 연결하는 작업자로서,<br />
+            디지털 안에서 이야기가 살아나는 순간을 설계합니다.
+          </h1>
         </div>
       </div>
     </header>
     <main>
-      <section class="intro">
-        <div class="intro-txt">
-          <h1>시각과 경험을 연결하는 작업자로서 디지털 안에서 이야기가 살아나는 순간을 설계합니다.</h1>
-        </div>
-      </section>
       <section class="state">
         <div class="state-con">
-          <h1>Who am I</h1>
-          <div class="state-body">
-            <ul class="r-list">
-              <li>
-                Information
-                <ul class="check-sub">
-                  <li>김화연</li>
-                  <li>1998. 09. 17.</li>
-                  <li>+82 10 0000 0000</li>
-                  <li>m2021140@gmail.com</li>
-                </ul>
-              </li>
-              <li>
-                tool
-                <ul class="tool-sub">
-                  <li>Adobe Photoshop</li>
-                  <li>Adobe Illustrator</li>
-                  <li>Adobe InDesign</li>
-                  <li>Adobe Premiere</li>
-                  <li>Adobe After Effects</li>
-                  <li>Figma</li>
-                  <li>Procreate</li>
-                </ul>
-              </li>
-              <li>
-                Skill
-                <ul class="skill-sub">
-                  <li>GUI 디자인</li>
-                  <li>브랜드 아이덴티티 디자인</li>
-                  <li>편집 디자인</li>
-                  <li>패키지 디자인</li>
-                  <li>포스터 디자인</li>
-                  <li>일러스트레이션</li>
-                  <li>타이포그라피</li>
-                </ul>
-              </li>
-              <li>
-                Education
-                <ul class="Edu-sub">
-                  <li>2017.03 ~ 2021.02</li>
-                  <li>2021.03 ~ 2023.02</li>
-              </li>
-              <li>
-                Experience
-                <ul class="Exp-sub">
-                  <li>광주옥외광고디자인 수상</li>
-                  <li>전남정보문화산업진흥원 인턴</li>
-                  <li>광주시립미술관 학예연구실 인턴</li>
-                  <li>국민대학교 일반대학원 TA조교</li>
-                  <li>ARKO 주관 '예술과 기술 융합 사업' 프로젝트 참여</li>
-                </ul>
-              </li>
-            </ul>
-            <div class="see-work">
-              <p>
-                See Work
-                <i class="xi-long-arrow-right"></i>
-              </p>
-            </div>
-          </div>
+          <h1>Who am I?</h1>
+          <p><img src="./images/hyeon.png" alt="" /></p>
+        </div>
+        <div class="state-body">
+          <ul class="r-list">
+            <li>
+              <strong>Information</strong>
+              <ul class="check-sub">
+                <li>김화연</li>
+                <li>1998. 09. 17.</li>
+                <li>+82 10 0000 0000</li>
+                <li>m2021140@gmail.com</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Education</strong>
+              <ul class="Edu-sub">
+                <li>국민대학교 일반대학원 미술이론 전공 2021.03 ~ 2023.02</li>
+                <li>목포대학교 미술학과 2017.03 ~ 2021.02</li>
+              </ul>
+            </li>
+            <li>
+              <strong>tool</strong>
+              <ul class="tool-sub">
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe InDesign</li>
+                <li>Adobe Premiere</li>
+                <li>Adobe After Effects</li>
+                <li>Figma</li>
+                <li>Procreate</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Experience</strong>
+              <ul class="Exp-sub">
+                <li>광주옥외광고디자인 수상</li>
+                <li>전남정보문화산업진흥원 인턴</li>
+                <li>광주시립미술관 학예연구실 인턴</li>
+                <li>국민대학교 일반대학원 TA조교</li>
+                <li>ARKO 주관 '예술과 기술 융합 사업' 프로젝트 참여</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Skill</strong>
+              <ul class="skill-sub">
+                <li>GUI 디자인</li>
+                <li>브랜드 아이덴티티 디자인</li>
+                <li>편집 디자인</li>
+                <li>패키지 디자인</li>
+                <li>포스터 디자인</li>
+                <li>일러스트레이션</li>
+                <li>타이포그라피</li>
+              </ul>
+            </li>
+            <li>
+              <div class="see-work">
+                <p>
+                  <a href="">
+                    See Work
+                    <i class="xi-long-arrow-right"></i>
+                  </a>
+                </p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="state-mid-con">
-        <div class="mid-1">
+        <div class="mid">
           <h3>3</h3>
           <p>Independent UX & visual design projects</p>
         </div>
-        <div class="mid-2">
-          <h3>120+Hours</h3>
+        <div class="mid">
+          <h3>120+ hours</h3>
           <p>Dedicated to interface prototyping & motion practice</p>
         </div>
-        <div class="mid-3">
+        <div class="mid">
           <h3>5+ years</h3>
           <p>Working across art, digital media & UX</p>
         </div>
       </section>
-      <section class="value"></section>
       <section class="work-info">
         <div class="work-information">
-          <h1>work</h1>
-          <ul>
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-            <li><p></p></li>
-          </ul>
+          <h1>PROJECT</h1>
+          <div class="work-list">
+            <a href="">
+              <dl class="work-item">
+                <dt>DMA</dt>
+                <dd class="year">2025</dd>
+                <dd class="arrow"><i class="xi-long-arrow-right"></i></dd>
+              </dl>
+            </a>
+            <a href="">
+              <dl class="work-item">
+                <dt>Tecta</dt>
+                <dd class="year">2025</dd>
+                <dd class="arrow"><i class="xi-long-arrow-right"></i></dd>
+              </dl>
+            </a>
+            <a href="">
+              <dl class="work-item">
+                <dt>Lee Yeong Ji</dt>
+                <dd class="year">2025</dd>
+                <dd class="arrow"><i class="xi-long-arrow-right"></i></dd>
+              </dl>
+            </a>
+          </div>
         </div>
         <h4>프로젝트가 채워지는 일은</h4>
       </section>
@@ -130,24 +187,41 @@
     <footer>
       <div class="footer-con">
         <div class="footer-logo">
-          <p><img src="" alt="" /></p>
+          <p><img src="./images/glass-gray.png" alt="" /></p>
         </div>
         <div class="my-info">
           <div class="l-info">
-            <ul> contact
+            <ul>
+              CONTACT
               <li>+82. 10. 3570. 2664</li>
               <li>a01035702664@gmail.com</li>
             </ul>
           </div>
           <div class="r-info">
-            <ul>SOCIAL
-              <li>Instagram</li>
-              <li>Behance</li>
+            <ul>
+              SOCIAL
+              <li><a href="">Instagram</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <p><img src="" alt="" /></p>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.querySelector(".m-menu");
+        const menuText = menuBtn.querySelector("p");
+        const menuList = document.querySelector(".m-click");
+
+        let isOpen = false;
+
+        menuBtn.addEventListener("click", function () {
+          isOpen = !isOpen;
+          menuList.classList.toggle("is-open", isOpen);
+          menuText.textContent = isOpen ? "Close" : "Menu";
+          menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      });
+    </script>
   </body>
 </html>

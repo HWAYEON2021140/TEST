@@ -1,0 +1,39 @@
+@charset "utf-8";
+$main-color: hotpink;
+@mixin txt {
+  background-color: $main-color;
+  color: #fff;
+}
+@mixin text(&bg, &color, $margin) {
+  background-color: $bg;
+  line-height: $size;
+  color: $color;
+  margin: $margin;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  @include text(#ccc, #333, 20px);
+  li {
+    display: inline-block;
+    a {
+      display: block;
+      &:hover {
+        text-decoration: chocolate;
+      }
+    }
+  }
+  p {
+    color: $main-color;
+  }
+}
